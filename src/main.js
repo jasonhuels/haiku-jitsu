@@ -7,8 +7,15 @@ import * as enemy from './enemy.js';
 import {haikuChecker} from './haikuChecker.js'
 import {Battle} from './battle.js'
 
+$(document).ready(function() {
+  $("#user-info").submit(function(event){
+      event.preventDefault();
+     let nameOfPlayer = $("#name-field").val();
+     // $(".row").show();
 
-$(function() {
+  });
+
+  $("#score").append("<li>" +         + "</li>");
   let player = new Player();
   let hippie = new enemy.Hippie(100);
 

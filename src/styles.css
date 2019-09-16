@@ -1,0 +1,28 @@
+.col {
+  border-style: solid;
+}
+
+ /* #first-line, #second-line, #third-line, #submit {
+  margin-top: 20px;
+} */
+
+ .col-md-9 {
+  overflow: hidden;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+
+.col-md-3 {
+  overflow: hidden;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+.row {
+  margin: 20px;
+}
+.bg-success {
+  margin: 10px;
+}
+.score {
+  border-style: solid;
+}
