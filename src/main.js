@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   $("#score").append("<li>" +         + "</li>");
   let player = new Player();
-  let hippie = new enemy.Hipster(100);
+  let hippie = new enemy.Hippie(100);
 
   let bat1 = new Battle(player, hippie);
   bat1.playerTurn();

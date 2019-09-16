@@ -11,7 +11,7 @@ export class Enemy {
 
   attack() {
     let randomIndex = Math.floor(Math.random()*this.haikus.length);
-    return this.haikus[5];
+    return this.haikus[randomIndex];
   }
 
   checkHealth() {
