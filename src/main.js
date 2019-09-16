@@ -5,7 +5,7 @@ import $ from 'jquery';
 var syllable = require('syllable')
 
 
-$(function() {
+$(document).ready (function() {
   $("#haiku").submit(function(event) {
     event.preventDefault();
     let firstLine = $("#first-line").val();
@@ -18,4 +18,15 @@ $(function() {
 
     console.log(firstCount,"\n", secondCount, "\n", thirdCount);
   });
+
+ // submit function for player's name
+  $("#user-info").submit(function(event){
+      event.preventDefault();
+     let nameOfPlayer = $("#name-field").val();
+
+  });
+
+  $("")
+
+
 });
