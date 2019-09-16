@@ -22,8 +22,12 @@
     </div>
     <div class="row game-play">
       <div class="col col-md-2">
+        <h1 id="show-name"></h1>
+        <div class="show-avatar">
+
+        </div>
         <ul id="score">
-          <p>This is the score frame</p>
+          <p>score frame</p>
         </ul>
       </div>
       <div class="col col-md-10">
@@ -31,19 +35,24 @@
 
         </div>
         <div class="battle-frame">
-          <h1 id="adversary"></h1>
+          <div class="adv-output-field">
+            <h1 id="adversary">Adversary</h1>
+            <h3 id="first-adver">test</h3>
+            <h3 id="second-adver">test</h3>
+            <h3 id="third-adver">test</h3>
+          </div>
           <div id="adversary-avatar"></div>
-          <form id="haiku" action="index.html" method="post">
-            <input type="text" id="first-line" placeholder="first line"><br>
-            <input type="text" id="second-line" placeholder="second line"><br>
-            <input type="text" id="third-line" placeholder="third line"><br>
-            <button type="submit" id="submit" name="button">Submit</button>
-          </form>
-          <h1 id="player-name"></h1>
-          <div id="player-avatar>"></div>
+            <div id="player-game">
+            <h1 id="player-name"></h1>
+            <form id="haiku" action="index.html" method="post">
+              <input class="col-lg-5" type="text" id="first-line" placeholder="first line"><br>
+              <input class="col-lg-5" type="text" id="second-line" placeholder="second line"><br>
+              <input class="col-lg-5" type="text" id="third-line" placeholder="third line"><br>
+              <button type="submit" id="submit" name="button">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
-
     </div>
   <!-- </div> -->
 </body>

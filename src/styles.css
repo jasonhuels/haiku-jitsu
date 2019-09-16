@@ -26,3 +26,25 @@
 .score {
   border-style: solid;
 }
+.welcome-screen {
+  text-align: center;
+}
+.game-play {
+  /* display: none; */
+}
+
+#show-name {
+  text-align: center;
+}
+.adv-output-field {
+  margin-left: 700px;
+}
+#adversary {
+  text-align: center;
+}
+#adversary-avatar {
+  margin-top: -120px;
+}
+#player-game {
+  margin-top: 800px;
+}
