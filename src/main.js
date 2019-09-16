@@ -6,6 +6,13 @@ var syllable = require('syllable')
 
 
 $(document).ready (function() {
+  $("#user-info").submit(function(event){
+      event.preventDefault();
+     let nameOfPlayer = $("#name-field").val();
+     // $(".row").show();
+
+  });
+
   $("#haiku").submit(function(event) {
     event.preventDefault();
     let firstLine = $("#first-line").val();
@@ -19,14 +26,9 @@ $(document).ready (function() {
     console.log(firstCount,"\n", secondCount, "\n", thirdCount);
   });
 
- // submit function for player's name
-  $("#user-info").submit(function(event){
-      event.preventDefault();
-     let nameOfPlayer = $("#name-field").val();
+     $("#score").append("<li>" +         + "</li>");
 
-  });
 
-  $("")
 
 
 });
