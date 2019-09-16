@@ -19,13 +19,22 @@ export class Battle {
       $("#haiku").trigger("reset");
 
       if(haikuChecker(line1, line2, line3)) {
-        console.log(doDamage(line1, line2, line3, this.enemy));
+        let damage = doDamage(line1, line2, line3, this.enemy);
+        console.log(damage);
+        this.enemy.takeDamage(damage);
+        this.enemyTurn();
       }
 
     });
   }
 
   enemyTurn() {
-    enemy.attack();
+    let attack = this.enemy.attack();
+    let damage = 0;
+    if(haikuChecker(attack[0], attack[1], attack[2])) {
+      damage = doDamage(attack[0], attack[1], attack[2], this.player);
+    }
+
+    console.log(attack, damage);
   }
 }

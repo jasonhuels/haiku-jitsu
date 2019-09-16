@@ -13,6 +13,14 @@ export class Enemy {
     let randomIndex = Math.floor(Math.random()*5);
     return this.haikus[randomIndex];
   }
+
+  checkHealth() {
+    let defeated = false;
+    if(this.health <= 0) {
+      defeated = true;
+    }
+    return defeated;
+  }
 }
 
 export class Hippie extends Enemy {

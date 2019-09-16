@@ -9,60 +9,32 @@ export function haikuChecker(line1, line2, line3) {
   let firstLine = line1.split(" ");
   let secondLine = line2.split(" ");
   let thirdLine = line3.split(" ");
+  let lines = [firstLine, secondLine, thirdLine];
+  let counts = [count1, count2, count3];
 
   const subtractOne = [/ense/g];
   const addOne = [/sses/g];
 
-  for (let i=0; i<firstLine.length; i++){
-    for(let j=0; j<subtractOne.length; j++) {
-      if(firstLine[i].match(subtractOne[j])){
-        count1--;
+  for(let k=0; k<lines.length; k++) {
+    for (let i=0; i<lines[k].length; i++){
+      for(let j=0; j<subtractOne.length; j++) {
+        if(lines[k][i].match(subtractOne[j])){
+          counts[k]--;
+        }
+      }
+    }
+
+    for (let i=0; i<lines[k].length; i++){
+      for(let j=0; j<addOne.length; j++) {
+        if(lines[k][i].match(addOne[j])){
+          counts[k]++;
+        }
       }
     }
   }
 
-  for (let i=0; i<firstLine.length; i++){
-    for(let j=0; j<addOne.length; j++) {
-      if(firstLine[i].match(addOne[j])){
-        count1++;
-      }
-    }
-  }
-
-  for (let i=0; i<secondLine.length; i++){
-    for(let j=0; j<subtractOne.length; j++) {
-      if(secondLine[i].match(subtractOne[j])){
-        count2--;
-      }
-    }
-  }
-
-  for (let i=0; i<secondLine.length; i++){
-    for(let j=0; j<addOne.length; j++) {
-      if(secondLine[i].match(addOne[j])){
-        count2++;
-      }
-    }
-  }
-
-  for (let i=0; i<thirdLine.length; i++){
-    for(let j=0; j<subtractOne.length; j++) {
-      if(thirdLine[i].match(subtractOne[j])){
-        count3--;
-      }
-    }
-  }
-
-  for (let i=0; i<thirdLine.length; i++){
-    for(let j=0; j<addOne.length; j++) {
-      if(thirdLine[i].match(addOne[j])){
-        count3++;
-      }
-    }
-  }
-
-  console.log(count1, count2, count3);
-  if(count1 === 5 && count2 === 7 && count3 === 5) {
+  console.log(counts[0], counts[1], counts[2]);
+  if(counts[0] === 5 && counts[1] === 7 && counts[2] === 5) {
     isHaiku = true;
   }
 
