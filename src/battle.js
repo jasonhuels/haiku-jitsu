@@ -13,18 +13,19 @@ export class Battle {
   playerTurn() {
     $("#haiku").submit((event) => {
       event.preventDefault();
-
       let line1 = $("#first-line").val();
       let line2 = $("#second-line").val();
       let line3 = $("#third-line").val();
-
-      console.log(this.player, this.enemy);
+      $("#haiku").trigger("reset");
 
       if(haikuChecker(line1, line2, line3)) {
         console.log(doDamage(line1, line2, line3, this.enemy))
       }
 
     });
+  }
 
-}
+  enemyTurn() {
+    enemy.attack();
+  }
 }
