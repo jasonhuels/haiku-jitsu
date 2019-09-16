@@ -1,9 +1,9 @@
 var syllable = require('syllable');
 
 export function haikuChecker(line1, line2, line3) {
-  let firstCount = syllable(line1);
-  let secondCount = syllable(line2);
-  let thirdCount = syllable(line3);
+  let count1 = syllable(line1);
+  let count2 = syllable(line2);
+  let count3 = syllable(line3);
   let isHaiku = false;
 
   let firstLine = line1.split(" ");
@@ -14,19 +14,55 @@ export function haikuChecker(line1, line2, line3) {
   const addOne = [/sses/g];
 
   for (let i=0; i<firstLine.length; i++){
-    if(firstLine[i].match(subtractOne[0])){
-      firstCount--;
+    for(let j=0; j<subtractOne.length; j++) {
+      if(firstLine[i].match(subtractOne[j])){
+        count1--;
+      }
     }
   }
 
   for (let i=0; i<firstLine.length; i++){
-    if(firstLine[i].match(addOne[0])){
-      firstCount++;
+    for(let j=0; j<addOne.length; j++) {
+      if(firstLine[i].match(addOne[j])){
+        count1++;
+      }
     }
   }
 
-  console.log(firstCount, secondCount, thirdCount);
-  if(firstCount === 5 && secondCount === 7 && thirdCount === 5) {
+  for (let i=0; i<secondLine.length; i++){
+    for(let j=0; j<subtractOne.length; j++) {
+      if(secondLine[i].match(subtractOne[j])){
+        count2--;
+      }
+    }
+  }
+
+  for (let i=0; i<secondLine.length; i++){
+    for(let j=0; j<addOne.length; j++) {
+      if(secondLine[i].match(addOne[j])){
+        count2++;
+      }
+    }
+  }
+
+  for (let i=0; i<thirdLine.length; i++){
+    for(let j=0; j<subtractOne.length; j++) {
+      if(thirdLine[i].match(subtractOne[j])){
+        count3--;
+      }
+    }
+  }
+
+  for (let i=0; i<thirdLine.length; i++){
+    for(let j=0; j<addOne.length; j++) {
+      if(thirdLine[i].match(addOne[j])){
+        count3++;
+      }
+    }
+  }
+
+  console.log(count1, count2, count3);
+  if(count1 === 5 && count2 === 7 && count3 === 5) {
     isHaiku = true;
   }
 

@@ -19,7 +19,7 @@ export class Battle {
       $("#haiku").trigger("reset");
 
       if(haikuChecker(line1, line2, line3)) {
-        console.log(doDamage(line1, line2, line3, this.enemy))
+        console.log(doDamage(line1, line2, line3, this.enemy));
       }
 
     });
