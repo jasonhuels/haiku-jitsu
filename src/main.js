@@ -2,20 +2,17 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
-var syllable = require('syllable')
+import {Player} from './player.js';
+import * as enemy from './enemy.js';
+import {haikuChecker} from './haikuChecker.js'
+import {Battle} from './battle.js'
 
 
 $(function() {
-  $("#haiku").submit(function(event) {
-    event.preventDefault();
-    let firstLine = $("#first-line").val();
-    let secondLine = $("#second-line").val();
-    let thirdLine = $("#third-line").val();
-    console.log(firstLine,"\n", secondLine, "\n", thirdLine);
-    let firstCount = syllable(firstLine);
-    let secondCount = syllable(secondLine);
-    let thirdCount = syllable(thirdLine);
+  let player = new Player();
+  let hippie = new enemy.Hippie(100);
 
-    console.log(firstCount,"\n", secondCount, "\n", thirdCount);
-  });
+  let bat1 = new Battle(player, hippie);
+  bat1.playerTurn();
+
 });
