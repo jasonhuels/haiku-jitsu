@@ -5,17 +5,14 @@ import $ from 'jquery';
 import {Player} from './player.js';
 import * as enemy from './enemy.js';
 import {haikuChecker} from './haikuChecker.js'
-
+import {Battle} from './battle.js'
 
 
 $(function() {
-  $("#haiku").submit(function(event) {
-    event.preventDefault();
-    let line1 = $("#first-line").val();
-    let line2 = $("#second-line").val();
-    let line3 = $("#third-line").val();
+  let player = new Player();
+  let hippie = new enemy.Hippie(100);
 
-    haikuChecker(line1, line2, line3);
+  let bat1 = new Battle(player, hippie);
+  bat1.playerTurn();
 
-  });
 });

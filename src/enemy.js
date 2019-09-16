@@ -15,7 +15,7 @@ export class Enemy {
 
 export class Hippie {
   constructor(health) {
-    this.health = 100;
-    this.keywords = ["flower", "love", "patchouli", "woodstock", "phish"];
+    this.health = health;
+    this.keywords = ["flower", "love", "incense", "groovy", "psychedelic"];
   }
 }
