@@ -1,0 +1,22 @@
+.col {
+  border-style: solid;
+}
+
+#name-field {
+  margin-top: 30px;
+}
+
+#first-line, #second-line, #third-line, #submit {
+  margin-top: 20px;
+}
+
+.col-md-9 {
+  overflow: hidden;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+
+.col-md-3 {
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
