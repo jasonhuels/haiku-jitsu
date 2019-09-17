@@ -35,7 +35,6 @@ export class Hippie extends Enemy {
     this.haikus[4] = ["Hey man, be nice dude", "Don't harsh my buzz, I'm tripping", "I'm feeling groovy"];
     this.haikus[5] = ["Dude don't drag me down", "your aura's all askew and", "I'm too high to fight"];
   }
-
 }
 
 export class Hipster extends Enemy {
@@ -50,5 +49,46 @@ export class Hipster extends Enemy {
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
   }
+}
 
+export class Hacker extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
+    this.haikus = [];
+    this.haikus[0] = ["My code is 1337", "I can't be beat", "What do you mean, parsing error?"];
+    this.haikus[1] = ["Internet of things", "a hacker's wonderful dream", "D.D.O.S. time"];
+    this.haikus[2] = ["My code is so dry", "I only write JavaScript", "asynchronously"];
+    this.haikus[3] = ["Hacked your computer", "your password is just password", "you're a total noob"];
+    this.haikus[4] = ["Hot wires in my hands", "connect for complete circuit", "Dropping logic bombs"];
+    this.haikus[5] = ["Crying constantly", "code can't compile correctly", "congratulations"];
+  }
+}
+
+export class Professor extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.haikus = [];
+    this.haikus[0] = ["Appreciation", "for the ivory tower", "achoo."];
+    this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
+    this.haikus[2] = ["Creativity", "Oversimplification", "University"];
+    this.haikus[3] = ["Unbelievable", "Megalomaniacal", "Diagnostician"];
+    this.haikus[4] = ["Intimidating", "Editorializing", "Vocabulary"];
+    this.haikus[5] = ["Conscientiousness", "Conceptualization", "Communication"];
+  }
+}
+
+export class TBD2 extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.haikus = [];
+    this.haikus[0] = ["", "", ""];
+    this.haikus[1] = ["", "", ""];
+    this.haikus[2] = ["", "", ""];
+    this.haikus[3] = ["", "", ""];
+    this.haikus[4] = ["", "", ""];
+    this.haikus[5] = ["", "", ""];
+  }
 }
