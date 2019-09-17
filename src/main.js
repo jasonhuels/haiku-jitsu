@@ -23,6 +23,12 @@ function battleEnd() {
   }, 2000);
 }
 
+// function healthBar() {
+//   if (this.health === 100 ) {
+//     $("#p1-100").addClass("green");
+//   }
+// }
+
 $(document).ready(function() {
   let newPlayer = new Player();
   $("#user-info").submit(function(event){
@@ -39,41 +45,35 @@ $(document).ready(function() {
   $("#hippie").click(function(){
     $("#adversary").text("Hippie");
     newPlayer.health = 100;
-    let hippie = new enemy.Hippie(0);
+    let hippie = new enemy.Hippie(100);
     let newBattle = new Battle(newPlayer, hippie);
     console.log(newBattle);
-   battleStart();
-    // newBattle.battleOver();
-   // while(!newBattle.battleOver()) {
-   //   newBattle.playerTurn();
-   //   newBattle.enemyTurn();
-   // }
-   if (newBattle.over) {
-     battleEnd();
-   }
+    // healthBar();
+    battleStart();
+    while(!newBattle.over) {
+    newBattle.playerTurn();
+    }
+
    if (newBattle.winner === newPlayer) {
        alert("YOU WIN");
        $("#score").append("<li> Hippie Defeated!</li>");
+       battleEnd();
     } else if (newBattle.winner === hippie) {
        alert("YOU LOSE");
+       battleEnd();
     }
  });
 
  $("#hipster").click(function(){
    $("#adversary").text("Hipster");
     newPlayer.health = 100;
-   let hipster = new enemy.Hipster(0);
-   console.log("hipster", hipster);
+   let hipster = new enemy.Hipster(100);
    let newBattle = new Battle(newPlayer, hipster);
    battleStart();
-   newBattle.battleOver();
-   console.log(newBattle);
-   // while(!newBattle.battleOver()) {
-   //   newBattle.playerTurn();
-   //   newBattle.enemyTurn();
-   // }
+   while(!newBattle.over) {
+   newBattle.playerTurn();
+   }
    if (newBattle.winner === newPlayer) {
-     console.log(newBattle);
      alert("YOU WIN");
      $("#score").append("<li> Hipster Defeated!</li>");
      battleEnd();
