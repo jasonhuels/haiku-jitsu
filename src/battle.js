@@ -28,8 +28,10 @@ export class Battle {
         this.battleOver();
         //this.enemyTurn();
       }
+      inputtedLines();
     });
   }
+
 
   enemyTurn() {
     let attack = this.enemy.attack();
@@ -50,4 +52,14 @@ export class Battle {
       this.winner = this.player;
     }
   }
+}
+
+function inputtedLines() {
+  let line1 = $("#first-line").val();
+  let line2 = $("#second-line").val();
+  let line3 = $("#third-line").val();
+  $(".input-lines").append("<li>" + line1 + "</li>");
+  $(".input-lines").append("<li>" + line2 + "</li>");
+  $(".input-lines").append("<li>" + line3 + "</li>");
+
 }
