@@ -68,9 +68,9 @@ export class Hacker extends Enemy {
 export class Professor extends Enemy {
   constructor(health) {
     super(health);
-    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.keywords = ["Vocabulary", "Intimidating", "Illuminati", "Megalomaniacal", "Conceptualization", "Unbelievable", "University"];
     this.haikus = [];
-    this.haikus[0] = ["Appreciation", "for the ivory tower", "achoo."];
+    this.haikus[0] = ["Appreciating", "for the ivory tower", "achoo."];
     this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
     this.haikus[2] = ["Creativity", "Oversimplification", "University"];
     this.haikus[3] = ["Unbelievable", "Megalomaniacal", "Diagnostician"];
@@ -79,16 +79,16 @@ export class Professor extends Enemy {
   }
 }
 
-export class TBD2 extends Enemy {
+export class Goth extends Enemy {
   constructor(health) {
     super(health);
-    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.keywords = ["soul", "miasma", "angst", "rain", "pain", "darkness", "death", "decay"];
     this.haikus = [];
-    this.haikus[0] = ["", "", ""];
-    this.haikus[1] = ["", "", ""];
-    this.haikus[2] = ["", "", ""];
-    this.haikus[3] = ["", "", ""];
-    this.haikus[4] = ["", "", ""];
-    this.haikus[5] = ["", "", ""];
+    this.haikus[0] = ["Death, pain, and sadness", "there is no escape from this", "I'm really really sad"];
+    this.haikus[1] = ["Miasma raining", "on my dark decaying soul", "death is coming soon"];
+    this.haikus[2] = ["Angst on whole wheat toast", "pain is my companion", "rain on my parade"];
+    this.haikus[3] = ["Darkness surrounds me", "a frown is my umbrella", "there all is aching"];
+    this.haikus[4] = ["The cemetary", "is where I spend my free time", "summer vacation"];
+    this.haikus[5] = ["Macabre maddening", "myopic miasmaness", "makes me malcontent"];
   }
 }
