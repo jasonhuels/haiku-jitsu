@@ -14,7 +14,7 @@ export class Enemy {
     return this.haikus[randomIndex];
   }
 
-  checkHealth() {
+  checkDefeated() {
     let defeated = false;
     if(this.health <= 0) {
       defeated = true;

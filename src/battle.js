@@ -8,6 +8,9 @@ export class Battle {
   constructor(player, enemy) {
     this.player = player;
     this.enemy = enemy;
+    this.over = false;
+    this.battleOver();
+    this.winner = '';
   }
 
   playerTurn() {
@@ -22,9 +25,9 @@ export class Battle {
         let damage = doDamage(line1, line2, line3, this.enemy);
         console.log(damage);
         this.enemy.takeDamage(damage);
-        this.enemyTurn();
+        this.battleOver();
+        //this.enemyTurn();
       }
-
     });
   }
 
@@ -34,7 +37,17 @@ export class Battle {
     if(haikuChecker(attack[0], attack[1], attack[2])) {
       damage = doDamage(attack[0], attack[1], attack[2], this.player);
     }
-
+    this.battleOver();
     console.log(attack, damage);
+  }
+
+  battleOver() {
+    if(this.player.checkDefeated()) {
+      this.over = true;
+      this.winner = this.enemy;
+    } else if(this.enemy.checkDefeated()) {
+      this.over = true;
+      this.winner = this.player;
+    }
   }
 }
