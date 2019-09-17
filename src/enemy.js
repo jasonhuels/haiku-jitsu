@@ -35,7 +35,6 @@ export class Hippie extends Enemy {
     this.haikus[4] = ["Hey man, be nice dude", "Don't harsh my buzz, I'm tripping", "I'm feeling groovy"];
     this.haikus[5] = ["Dude don't drag me down", "your aura's all askew and", "I'm too high to fight"];
   }
-
 }
 
 export class Hipster extends Enemy {
@@ -50,5 +49,4 @@ export class Hipster extends Enemy {
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
   }
-
 }
