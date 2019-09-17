@@ -10,6 +10,7 @@
 <body>
   <!-- <div class="container"> -->
     <div class="welcome-screen">
+
       <!-- logo here -->
       <h1>Haiku Jitsu</h1>
       <form id="user-info">
@@ -22,21 +23,27 @@
     </div>
     <div class="row game-play">
       <div class="col col-md-2">
-        <h1 id="show-name"></h1>
-        <div class="show-avatar">
+        <div id="game-info-panel">
+          <h1 id="show-name"></h1>
+          <!-- <div class="show-avatar">
+
+          </div> -->
+          <ul id="score">
+            <p>Accomplishments:</p>
+          </ul>
+        </div>
 
         </div>
-        <ul id="score">
-          <p>score frame</p>
-        </ul>
-      </div>
-      <div class="col col-md-10">
+        <div class="col col-md-10" id="main-game">
         <div class="main-map">
-
+          <h1>Hippie</h1>
+            <img id="hippie" src="https://www.pngkey.com/png/detail/60-608037_stick-figure-running-drawing-download-animation-free-stick.png" alt="a stick figure">
+            <h1>Hipster</h1>
+            <img id="hipster" src="https://t3.ftcdn.net/jpg/00/80/41/34/500_F_80413451_JpH4YrPvmiwINVAny8xpXYa2tFiLbkBl.jpg" alt="A picture">
         </div>
         <div class="battle-frame">
           <div class="adv-output-field">
-            <h1 id="adversary">Adversary</h1>
+            <h1 id="adversary"></h1>
             <h3 id="first-adver">test</h3>
             <h3 id="second-adver">test</h3>
             <h3 id="third-adver">test</h3>

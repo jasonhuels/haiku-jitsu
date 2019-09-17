@@ -8,7 +8,7 @@ export class Player {
     this.health -= dmgAmount;
   }
 
-  checkHealth() {
+  checkDefeated() {
     let defeated = false;
     if(this.health <= 0) {
       defeated = true;
