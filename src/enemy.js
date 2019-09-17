@@ -54,13 +54,13 @@ export class Hipster extends Enemy {
 export class Hacker extends Enemy {
   constructor(health) {
     super(health);
-    this.keywords = ["code", "hacker", "computer", "Epicodus", "javascript", "typing", "asynchronously", ""];
+    this.keywords = ["code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
     this.haikus = [];
-    this.haikus[0] = ["", "", ""];
-    this.haikus[1] = ["", "", ""];
-    this.haikus[2] = ["", "", ""];
-    this.haikus[3] = ["", "", ""];
-    this.haikus[4] = ["", "", ""];
-    this.haikus[5] = ["", "", ""];
+    this.haikus[0] = ["My code is 1337", "I can't be beat", "What do you mean, parsing error?"];
+    this.haikus[1] = ["Internet of things", "a hacker's wonderful dream", "D.D.O.S. time"];
+    this.haikus[2] = ["My code is so dry", "I only write JavaScript", "asynchronously"];
+    this.haikus[3] = ["Hacked your computer", "your password is just password", "you're a total noob"];
+    this.haikus[4] = ["Hot wires in my hands", "connect for complete circuit", "Dropping logic bombs"];
+    this.haikus[5] = ["Crying constantly", "code can't compile correctly", "congratulations"];
   }
 }

@@ -12,8 +12,8 @@ export function haikuChecker(line1, line2, line3) {
   let lines = [firstLine, secondLine, thirdLine];
   let counts = [count1, count2, count3];
 
-  const subtractOne = [/ense/g];
-  const addOne = [/sses/g];
+  const subtractOne = [/ense/g, /acked/g];
+  const addOne = [/sses/g, /ying/g];
 
   for(let k=0; k<lines.length; k++) {
     for (let i=0; i<lines[k].length; i++){
