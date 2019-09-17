@@ -11,9 +11,11 @@ $(document).ready(function() {
   $("#user-info").submit(function(event){
       event.preventDefault();
      let nameOfPlayer = $("#name-field").val();
-     // $(".row").show();
+     // $(".game-play").show();
+     $("#show-name").text(nameOfPlayer);
+     $("#player-name").text(nameOfPlayer)
+   });
 
-  });
 
   $("#score").append("<li>" +         + "</li>");
   let player = new Player();
