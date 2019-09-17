@@ -1,8 +1,13 @@
+import $ from 'jquery';
+
+
+
 export class Enemy {
   constructor(health) {
     this.health = health;
     this.keywords = [];
     this.haikus = [];
+    this.enemyHealthBar();
   }
 
   takeDamage(dmgAmount) {
@@ -20,6 +25,38 @@ export class Enemy {
       defeated = true;
     }
     return defeated;
+  }
+  enemyHealthBar() {
+    $("#adv-health").text(this.health);
+    if (this.health === 100) {
+      $(".a1-hp").show();
+      $(".a1-hp").removeClass("red");
+      $(".a1-hp").addClass("green");
+    } else if(this.health <= 90){
+      $("#a1-100").fadeOut();
+    } else if (this.health <= 80){
+      $("#a1-90").fadeOut();
+    } else if (this.health <= 70){
+      $("#a1-80").fadeOut();
+    } else if (this.health <= 60){
+      $("#a1-70").fadeOut();
+      $(".a1-hp").removeClass("green");
+      $(".a1-hp").addClass("yellow");
+    } else if (this.health <= 50){
+      $("#a1-60").fadeOut();
+    } else if (this.health <= 40){
+      $("#a1-50").fadeOut();
+    } else if (this.health <= 30){
+      $("#a1-40").fadeOut();
+      $(".a1-hp").removeClass("yellow")
+      $(".a1-hp").addClass("red");
+    } else if (this.health <= 20){
+      $("#a1-30").fadeOut();
+    } else if (this.health <= 10){
+      $("#a1-20").fadeOut();
+    } else if (this.health <= 0){
+      $("#a1-10").fadeOut();
+    }
   }
 }
 
