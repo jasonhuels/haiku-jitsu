@@ -39,6 +39,7 @@ export function doDamage(line1, line2, line3, enemy) {
   damage += checkAlliteration(haiku);
   damage -= noRepeats(haiku);
   // damage += checkRhymes(line1[line1.length-1], line2[line2.length-1], line3[line3.length-1]);
+  if(damage < 0) { damage = 0; }
   return damage;
 }
 

@@ -7,22 +7,6 @@ import * as enemy from './enemy.js';
 import {haikuChecker} from './haikuChecker.js';
 import {Battle} from './battle.js';
 
-function battleStart() {
-  $(".main-map").hide();
-  $(".battle-frame").show();
-  $("#main-game").removeClass("add-background");
-}
-
-function battleEnd() {
-  setTimeout(function() {
-    $("#adversary").text("");
-    $(".main-map").show();
-    $(".battle-frame").hide();
-    $("#main-game").addClass("add-background");
-
-  }, 2000);
-}
-
 $(document).ready(function() {
   let newPlayer = new Player();
   $("#user-info").submit(function(event){
@@ -39,14 +23,14 @@ $(document).ready(function() {
   $("#hippie").click(function(){
     $("#adversary").text("Hippie");
     newPlayer.health = 100;
-    let hippie = new enemy.Hippie(0);
+    let hippie = new enemy.Hippie(100);
     let newBattle = new Battle(newPlayer, hippie);
     console.log(newBattle);
+    newBattle.playerTurn();
    battleStart();
     // newBattle.battleOver();
-   // while(!newBattle.battleOver()) {
+   // while(!newBattle.over) {
    //   newBattle.playerTurn();
-   //   newBattle.enemyTurn();
    // }
    if (newBattle.over) {
      battleEnd();
@@ -62,15 +46,15 @@ $(document).ready(function() {
  $("#hipster").click(function(){
    $("#adversary").text("Hipster");
     newPlayer.health = 100;
-   let hipster = new enemy.Hipster(0);
+   let hipster = new enemy.Hipster(10);
    console.log("hipster", hipster);
    let newBattle = new Battle(newPlayer, hipster);
    battleStart();
    newBattle.battleOver();
    console.log(newBattle);
-   // while(!newBattle.battleOver()) {
+   newBattle.playerTurn();
+   // while(!newBattle.over) {
    //   newBattle.playerTurn();
-   //   newBattle.enemyTurn();
    // }
    if (newBattle.winner === newPlayer) {
      console.log(newBattle);
@@ -83,3 +67,19 @@ $(document).ready(function() {
    }
   });
 });
+
+function battleStart() {
+  $(".main-map").hide();
+  $(".battle-frame").show();
+  $("#main-game").removeClass("add-background");
+}
+
+function battleEnd() {
+  setTimeout(function() {
+    $("#adversary").text("");
+    $(".main-map").show();
+    $(".battle-frame").hide();
+    $("#main-game").addClass("add-background");
+
+  }, 2000);
+}
