@@ -1,4 +1,3 @@
-
 export class Rhymes {
 getRhymes(word) {
   return new Promise(function(resolve, reject) {

@@ -50,3 +50,17 @@ export class Hipster extends Enemy {
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
   }
 }
+
+export class Hacker extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["code", "hacker", "computer", "Epicodus", "javascript", "typing", "asynchronously", ""];
+    this.haikus = [];
+    this.haikus[0] = ["", "", ""];
+    this.haikus[1] = ["", "", ""];
+    this.haikus[2] = ["", "", ""];
+    this.haikus[3] = ["", "", ""];
+    this.haikus[4] = ["", "", ""];
+    this.haikus[5] = ["", "", ""];
+  }
+}
