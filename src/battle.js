@@ -12,19 +12,18 @@ export class Battle {
     this.winner = '';
   }
 
-  playerTurn() {
+  layerTurn() {
     $("#haiku").submit((event) => {
       event.preventDefault();
       let line1 = $("#first-line").val();
       let line2 = $("#second-line").val();
       let line3 = $("#third-line").val();
       $("#haiku").trigger("reset");
-
+      let damage = 0;
       if(haikuChecker(line1, line2, line3)) {
-        let damage = doDamage(line1, line2, line3, this.enemy);
+        damage = doDamage(line1, line2, line3, this.enemy);
         console.log(damage);
         this.enemy.takeDamage(damage);
-        console.log(this.enemy.health, this.enemy.checkDefeated());
       }
       this.battleOver();
       if(!this.over) {

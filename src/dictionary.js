@@ -1,8 +1,8 @@
-export class Rhymes {
-getRhymes(word) {
+export class Dictionary {
+checkWord(word) {
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
-    const url = `https://api.datamuse.com/words?rel_rhy=${word}`;
+    const url = `https://dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${process.env.API_KEY}`;
     request.onload = function() {
       if (this.status === 200) {
         resolve(request.response);

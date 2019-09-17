@@ -1,5 +1,5 @@
 import * as enemy from './enemy.js';
-import {Rhymes} from './rhymeCheck.js'
+import {Dictionary} from './dictionary.js'
 
 export function doDamage(line1, line2, line3, enemy) {
   let damage = 10;
@@ -28,6 +28,9 @@ export function doDamage(line1, line2, line3, enemy) {
   line1 = newLine1.split(" ");
   line2 = newLine2.split(" ");
   line3 = newLine3.split(" ");
+  // let bonus = bigWord(line1, newLine1, line2, newLine2, line3, newLine3);
+  // damage += bonus;
+
   let haiku = line1.concat(line2).concat(line3);
 
   for(let i=0; i<extraDamage.length; i++) {
@@ -38,7 +41,6 @@ export function doDamage(line1, line2, line3, enemy) {
 
   damage += checkAlliteration(haiku);
   damage -= noRepeats(haiku);
-  // damage += checkRhymes(line1[line1.length-1], line2[line2.length-1], line3[line3.length-1]);
   if(damage < 0) { damage = 0; }
   return damage;
 }
@@ -72,42 +74,38 @@ function noRepeats(haiku) {
   return deduction;
 }
 //
-// function checkRhymes(word1, word2, word3) {
-//   const words = [word1, word2, word3];
-//   let bonus = 0;
-//   let rhymes = [];
-//   rhymes[0] = [];
-//   rhymes[1] = [];
-//   rhymes[2] = [];
-//   let promise;
-//   for(let i=0; i<words.length; i++) {
-//     const rhyme = new Rhymes();
-//     promise = rhyme.getRhymes(words[i]);
-//     promise.then((response) => {
-//       const body = JSON.parse(response);
-//       for(let j=0; j<body.length; j++) {
-//         rhymes[i].push(body[j].word);
-//       }
-//     }, function(error) {
-//       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
-//     });
-//   }
-//
-//   promise.then(() => {
-//     //const body = JSON.parse(response);
-//     for(let k=0; k<words.length; k++){
-//       for(let m=0; m<rhymes.length; m++) {
-//         for(let n=0; n<rhymes[m].length; n++) {
-//           if(words[k] === rhymes[m][n]) {
-//             bonus += 5;
-//           }
-//         }
-//       }
+// async function realWord(word) {
+//   let exists = false;
+//   const diction = new Dictionary();
+//   const promise = diction.checkWord(word);
+//   promise.then(async (response) => {
+//     const body = await JSON.parse(response);
+//     if(body) {
+//       exists = true;
+//       console.log("add some points")
 //     }
-//     console.log(bonus);
-//     return bonus;
 //   }, function(error) {
 //     $('.showErrors').text(`There was an error processing your request: ${error.message}`);
 //   });
+//   return exists;
+// }
 //
+// async function bigWord(line1, newLine1, line2, newLine2, line3, newLine3) {
+//   let bonus = 0;
+//   if(line1 == newLine1) {
+//     if(await realWord(newLine1)) {
+//       bonus += 10;
+//     }
+//   }
+//   if(line2 == newLine2) {
+//     if(await realWord(newLine2)) {
+//       bonus += 10;
+//     }
+//   }
+//   if(line3 == newLine3) {
+//     if(await realWord(newLine3)) {
+//       bonus += 10;
+//     }
+//   }
+//   return bonus;
 // }

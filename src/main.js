@@ -25,7 +25,7 @@ $(document).ready(function() {
     newPlayer.health = 100;
     let hippie = new enemy.Hippie(100);
     let newBattle = new Battle(newPlayer, hippie);
-    console.log(newBattle);
+    // console.log(newBattle);
     newBattle.playerTurn();
    battleStart();
     // newBattle.battleOver();
@@ -47,17 +47,17 @@ $(document).ready(function() {
    $("#adversary").text("Hipster");
     newPlayer.health = 100;
    let hipster = new enemy.Hipster(10);
-   console.log("hipster", hipster);
+   // console.log("hipster", hipster);
    let newBattle = new Battle(newPlayer, hipster);
    battleStart();
    newBattle.battleOver();
-   console.log(newBattle);
+   // console.log(newBattle);
    newBattle.playerTurn();
    // while(!newBattle.over) {
    //   newBattle.playerTurn();
    // }
    if (newBattle.winner === newPlayer) {
-     console.log(newBattle);
+     // console.log(newBattle);
      alert("YOU WIN");
      $("#score").append("<li> Hipster Defeated!</li>");
      battleEnd();

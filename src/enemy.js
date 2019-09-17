@@ -70,7 +70,7 @@ export class Professor extends Enemy {
     super(health);
     this.keywords = ["Vocabulary", "Intimidating", "Illuminati", "Megalomaniacal", "Conceptualization", "Unbelievable", "University"];
     this.haikus = [];
-    this.haikus[0] = ["Appreciation", "for the ivory tower", "achoo."];
+    this.haikus[0] = ["Appreciating", "for the ivory tower", "achoo."];
     this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
     this.haikus[2] = ["Creativity", "Oversimplification", "University"];
     this.haikus[3] = ["Unbelievable", "Megalomaniacal", "Diagnostician"];
