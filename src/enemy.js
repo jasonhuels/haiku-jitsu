@@ -64,3 +64,31 @@ export class Hacker extends Enemy {
     this.haikus[5] = ["Crying constantly", "code can't compile correctly", "congratulations"];
   }
 }
+
+export class Professor extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.haikus = [];
+    this.haikus[0] = ["Appreciation", "for the ivory tower", "achoo."];
+    this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
+    this.haikus[2] = ["Creativity", "Oversimplification", "University"];
+    this.haikus[3] = ["Unbelievable", "Megalomaniacal", "Diagnostician"];
+    this.haikus[4] = ["Intimidating", "Editorializing", "Vocabulary"];
+    this.haikus[5] = ["Conscientiousness", "Conceptualization", "Communication"];
+  }
+}
+
+export class TBD2 extends Enemy {
+  constructor(health) {
+    super(health);
+    this.keywords = ["", "", "", "", "", "", "", ""];
+    this.haikus = [];
+    this.haikus[0] = ["", "", ""];
+    this.haikus[1] = ["", "", ""];
+    this.haikus[2] = ["", "", ""];
+    this.haikus[3] = ["", "", ""];
+    this.haikus[4] = ["", "", ""];
+    this.haikus[5] = ["", "", ""];
+  }
+}
