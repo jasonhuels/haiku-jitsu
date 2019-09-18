@@ -12,9 +12,9 @@ export class Battle {
     this.winner = '';
   }
 
+
   playerTurn() {
-    $("#haiku").submit((event) => {
-      event.preventDefault();
+
       let line1 = $("#first-line").val();
       let line2 = $("#second-line").val();
       let line3 = $("#third-line").val();
@@ -30,7 +30,7 @@ export class Battle {
         this.enemyTurn();
       }
       inputtedLines();
-    });
+
   }
 
 
@@ -41,13 +41,12 @@ export class Battle {
       damage = doDamage(attack[0], attack[1], attack[2], this.player);
       this.player.takeDamage(damage);
     }
-    this.battleOver();
     console.log(attack, damage);
     this.battleOver();
-    if(!this.over) {
-      this.playerTurn();
-
-    }
+    // if(!this.over) {
+    //   this.playerTurn();
+    //
+    // }
   }
 
   battleOver() {

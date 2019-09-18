@@ -10,17 +10,18 @@ import {Battle} from './battle.js';
 
   let newPlayer = new Player();
 
-    $(document).ready(function() {
-      $("#user-info").submit(function(event){
-        event.preventDefault();
-        let nameOfPlayer = $("#name-field").val();
-        $("#game-info-panel").show();
-        $("#show-name").text(nameOfPlayer);
-        $("#player-name").text(nameOfPlayer);
-        $(".main-map").show();
-        $("#main-game").addClass("add-background");
-        $(".welcome-screen").hide();
-      });
+  $(document).ready(function() {
+    let newBattle
+    $("#user-info").submit(function(event){
+      event.preventDefault();
+      let nameOfPlayer = $("#name-field").val();
+      $("#game-info-panel").show();
+      $("#show-name").text(nameOfPlayer);
+      $("#player-name").text(nameOfPlayer);
+      $(".main-map").show();
+      $("#main-game").addClass("add-background");
+      $(".welcome-screen").hide();
+    });
 
 
 
@@ -54,12 +55,10 @@ import {Battle} from './battle.js';
    $("#adversary").text("Hipster");
     newPlayer.health = 100;
    let hipster = new enemy.Hipster(100);
+   newBattle = new Battle(newPlayer, hipster);
    // console.log("hipster", hipster);
-   let newBattle = new Battle(newPlayer, hipster);
    battleStart();
-   newBattle.battleOver();
    // console.log(newBattle);
-   newBattle.playerTurn();
    // while(!newBattle.over) {
    //   newBattle.playerTurn();
    // }
@@ -73,7 +72,11 @@ import {Battle} from './battle.js';
      battleEnd();
    }
   });
+  $("#haiku").submit((event) => {
+    event.preventDefault();
+    newBattle.playerTurn();
     });
+});
 
     function battleStart() {
       $(".main-map").hide();

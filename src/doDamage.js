@@ -28,6 +28,19 @@ export function doDamage(line1, line2, line3, enemy) {
   line1 = newLine1.split(" ");
   line2 = newLine2.split(" ");
   line3 = newLine3.split(" ");
+  let bigWords = [];
+  if(line1 == newLine1) {
+    bigWords.push(newLine1);
+  }
+  if(line2 == newLine2) {
+    bigWords.push(newLine2);
+  }
+  if(line3 == newLine3) {
+    bigWords.push(newLine3);
+  }
+  if(bigWords.length > 0) {
+    damage += realWord(bigWords)
+  }
   // let bonus = bigWord(line1, newLine1, line2, newLine2, line3, newLine3);
   // damage += bonus;
 
@@ -73,22 +86,26 @@ function noRepeats(haiku) {
   }
   return deduction;
 }
-//
-// async function realWord(word) {
-//   let exists = false;
-//   const diction = new Dictionary();
-//   const promise = diction.checkWord(word);
-//   promise.then(async (response) => {
-//     const body = await JSON.parse(response);
-//     if(body) {
-//       exists = true;
-//       console.log("add some points")
-//     }
-//   }, function(error) {
-//     $('.showErrors').text(`There was an error processing your request: ${error.message}`);
-//   });
-//   return exists;
-// }
+
+async function realWord(words) {
+  let bonus = 0;
+  // for(let i=0; i<words.length; i++) {
+  //
+  // }
+  let exists = false;
+  // const diction = new Dictionary();
+  // const promise = diction.checkWord(word);
+  // promise.then(async (response) => {
+  //   const body = await JSON.parse(response);
+  //   if(body) {
+  //     exists = true;
+  //     console.log("add some points")
+  //   }
+  // }, function(error) {
+  //   $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+  // });
+  return exists;
+}
 //
 // async function bigWord(line1, newLine1, line2, newLine2, line3, newLine3) {
 //   let bonus = 0;
