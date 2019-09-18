@@ -2,25 +2,14 @@
 <html>
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <title>Haiku Checker</title>
 </head>
 
 <body>
-  <div class="welcome-screen">
-
-    <!-- logo here -->
-    <h1>Haiku Jitsu</h1>
-    <form id="user-info">
-      <label for="name-field">Player Name:</label>
-      <input type="text" id="name-field" name="name-field" placeholder="name" required><br>
-      <button type="submit" class="bg-success" name="button">Create Player!</button>
-
-    </form>
-    <!-- different avatar select -->
-  </div>
   <div class="row game-play">
-    <div class="col col-md-2">
+    <div class="col col-md-2 stripes">
       <div id="game-info-panel">
         <h1 id="show-name"></h1>
         <!-- <div class="show-avatar">
@@ -30,14 +19,39 @@
         <p>Accomplishments:</p>
       </ul>
     </div>
-
   </div>
-  <div class="col col-md-10" id="main-game">
+  <div class="col col-md-10 stripes" id="main-game">
+    <div class="welcome-screen">
+
+      <!-- logo here -->
+      <h1 id="title">Haiku Jitsu</h1>
+      <form id="user-info">
+        <label for="name-field">Player Name:</label>
+        <input type="text" id="name-field" name="name-field" placeholder="name" required><br>
+        <button type="submit" class="bg-success" name="button">Create Player!</button>
+
+      </form>
+      <!-- different avatar select -->
+    </div>
     <div class="main-map">
       <h1>Hippie</h1>
       <img id="hippie" src="https://www.pngkey.com/png/detail/60-608037_stick-figure-running-drawing-download-animation-free-stick.png" alt="a stick figure">
-      <h1>Hipster</h1>
+      <div class="hipster-div">
+       <h1>Hipster</h1>
       <img id="hipster" src="https://t3.ftcdn.net/jpg/00/80/41/34/500_F_80413451_JpH4YrPvmiwINVAny8xpXYa2tFiLbkBl.jpg" alt="A picture">
+    </div>
+    <div class="professor-div">
+      <h1>Professor</h1>
+      <img id="professor" src="https://media.istockphoto.com/vectors/cartoon-illustration-of-old-business-man-or-teacher-or-professor-at-vector-id847759486?k=6&m=847759486&s=612x612&w=0&h=K3-zZwYZZW5lzU46fZk-LHmKO7WwOjSlefCAakdndXQ=" alt="">
+    </div>
+    <div class="hacker-div">
+      <h1>Hacker</h1>
+      <img id="hacker" src="https://media.istockphoto.com/vectors/cyber-crime-doodle-vector-id518674300" alt="">
+    </div>
+    <div class="singer-div">
+      <h1>Singer</h1>
+      <img id="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
+    </div>
     </div>
     <div class="battle-frame">
       <div class="adv-output-field">
@@ -88,7 +102,7 @@
       </form>
       <div class="input-lines">
         <ul>
-          
+
         </ul>
       </div>
     </div>

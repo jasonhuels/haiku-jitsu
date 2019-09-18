@@ -65,11 +65,84 @@ import {Battle} from './battle.js';
      battleEnd();
    }
   });
+
+  $("#professor").click(function(){
+    $("#adversary").text("Professor");
+    console.log("working");
+    newPlayer.health = 100;
+    let professor = new enemy.Professor(100);
+    newBattle = new Battle(newPlayer, professor);
+
+   battleStart();
+
+   if (newBattle.over) {
+     battleEnd();
+   }
+   if (newBattle.winner === newPlayer) {
+       alert("YOU WIN");
+       $("#score").append("<li> Professor Defeated!</li>");
+       battleEnd();
+    } else if (newBattle.winner === professor) {
+       alert("YOU LOSE");
+       battleEnd();
+    }
+  });
+
+  $("#singer").click(function(){
+    $("#adversary").text("Singer");
+    console.log("working");
+    newPlayer.health = 100;
+    let singer = new enemy.Goth(100);
+    newBattle = new Battle(newPlayer, singer);
+
+   battleStart();
+
+   if (newBattle.over) {
+     battleEnd();
+   }
+   if (newBattle.winner === newPlayer) {
+       alert("YOU WIN");
+       $("#score").append("<li> Singer Defeated!</li>");
+       battleEnd();
+    } else if (newBattle.winner === singer) {
+       alert("YOU LOSE");
+       battleEnd();
+    }
+  });
+
+  $("#hacker").click(function(){
+    $("#adversary").text("hacker");
+    console.log("working");
+    newPlayer.health = 100;
+    let hacker = new enemy.Hacker(100);
+    newBattle = new Battle(newPlayer, hacker);
+
+   battleStart();
+
+   if (newBattle.over) {
+     battleEnd();
+   }
+   if (newBattle.winner === newPlayer) {
+       alert("YOU WIN");
+       $("#score").append("<li> Hacker Defeated!</li>");
+       battleEnd();
+    } else if (newBattle.winner === hacker) {
+       alert("YOU LOSE");
+       battleEnd();
+    }
+  });
+
+
+
+
+
   $("#haiku").submit((event) => {
     event.preventDefault();
     newBattle.playerTurn();
     });
 });
+
+
 
     function battleStart() {
       $(".main-map").hide();
