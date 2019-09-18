@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-
-
 export class Enemy {
   constructor(health) {
     this.health = health;
@@ -85,9 +83,11 @@ export class Hippie extends Enemy {
     this.haikus[4] = ["Hey man, be nice dude", "Don't harsh my buzz, I'm tripping", "I'm feeling groovy"];
     this.haikus[5] = ["Dude don't drag me down", "your aura's all askew and", "I'm too high to fight"];
     this.haikus[6] = ["My incense use is", "a lot like my politics", "very liberal"];
+    this.haikus[7] = ["Nostalgic dreaming", "I wish it was the sixties", "when Woodstock was good"];
+    this.haikus[8] = ["Patchouli perfume", "perpetually perplexed", "paisley pants preferred"];
   }
 }
-
+// this.haikus[] = ["", "", ""];
 export class Hipster extends Enemy {
   constructor(health) {
     super(health);
@@ -100,7 +100,9 @@ export class Hipster extends Enemy {
     this.haikus[3] = ["My mustache got stuck", "in a bespoke fixed-gear bike", "lost my fedora"];
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
-    this.haikus[6] = ["Micro-brew swilling", "from a dirty mason jar", "mustache will filter"];
+    this.haikus[6] = ["Swilling micro-brew", "from a dirty mason jar", "mustache will filter"];
+    this.haikus[7] = ["I am an artist", "dragging my old typewriter", "an honest crafstman"];
+    this.haikus[8] = ["You follow the trends", "I accidentely start", "I'm influential"];
   }
 }
 
@@ -108,7 +110,7 @@ export class Hacker extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Hacker";
-    this.keywords = ["code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
+    this.keywords = ["code", "hacked",  "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
     this.haikus = [];
     this.haikus[0] = ["My code is 1337", "I can't be beat", "What do you mean, parsing error?"];
     this.haikus[1] = ["Internet of things", "a hacker's wonderful dream", "D.D.O.S. time"];
@@ -116,7 +118,9 @@ export class Hacker extends Enemy {
     this.haikus[3] = ["Hacked your computer", "your password is just password", "you're a total noob"];
     this.haikus[4] = ["Hot wires in my hands", "connect for complete circuit", "Dropping logic bombs"];
     this.haikus[5] = ["Crying constantly", "code can't compile correctly", "cue consternation"];
-    this.haikus[6] = ["", "", ""];
+    this.haikus[6] = ["I am all power", "I hacked your credit checker", "Your score is zero"];
+    this.haikus[7] = ["All your database", "are belong to us, sucker!", "Get the reference?"];
+    this.haikus[8] = ["The Internet's down", "What is your wi-fi password", "I AM DESPERATE!"];
   }
 }
 
@@ -124,7 +128,7 @@ export class Professor extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Professor";
-    this.keywords = ["Vocabulary", "Intimidating", "Illuminati", "Megalomaniacal", "Conceptualization", "Unbelievable", "University"];
+    this.keywords = ["vocabulary", "intimidating", "illuminati", "megalomaniacal", "conceptualization", "unbelievable", "university", "mathematical"];
     this.haikus = [];
     this.haikus[0] = ["Appreciating", "for the ivory tower", "achoo."];
     this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
@@ -132,6 +136,9 @@ export class Professor extends Enemy {
     this.haikus[3] = ["Unbelievable", "Megalomaniacal", "Diagnostician"];
     this.haikus[4] = ["Intimidating", "Editorializing", "Vocabulary"];
     this.haikus[5] = ["Conscientiousness", "Conceptualization", "Communication"];
+    this.haikus[6] = ["Extramarital", "Emotionalization", "Extravaganza"];
+    this.haikus[7] = ["You, challenging me?", "Humerous Hysteria", "Humiliation"];
+    this.haikus[8] = ["Mathematical", "Maneuverability", "Metamorphoses"];
   }
 }
 
@@ -147,5 +154,8 @@ export class Goth extends Enemy {
     this.haikus[3] = ["Darkness surrounds me", "a frown is my umbrella", "there all is aching"];
     this.haikus[4] = ["The cemetary", "is where I spend my free time", "summer vacation"];
     this.haikus[5] = ["Macabre maddness", "myopic miasma malaise", "makes me malcontent"];
+    this.haikus[6] = ["Sweet serenity", "is smoking clove cigarettes", "while sobbing alone"];
+    this.haikus[7] = ["Eyeliner running", "the black ink in my journal", "is made of my tears"];
+    this.haikus[8] = ["NO! I'm not emo.", "I'm goth, there's a difference.", "Though I'm not sure what..."];
   }
 }

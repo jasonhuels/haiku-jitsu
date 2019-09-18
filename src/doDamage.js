@@ -2,6 +2,13 @@ import * as enemy from './enemy.js';
 import {Dictionary} from './dictionary.js'
 
 export async function doDamage(line1, line2, line3, enemy) {
+  /*
+  damArr[0] = base damage
+  damArr[1] = alliteration bonus
+  damArr[2] = repeat deduction
+  damArr[3] = single word line bonus
+  */
+  let damArr = [10];
   let damage = 10;
   let extraDamage = enemy.keywords;
   let reg = /[a-z \s]/g;

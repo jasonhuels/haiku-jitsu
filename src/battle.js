@@ -35,10 +35,11 @@ export class Battle {
     this.battleOver();
     if(!this.over) {
       this.enemyTurn();
+    } else {
+      this.battleEnd();
     }
 
   }
-
 
   async enemyTurn() {
     let attack = this.enemy.attack();
@@ -59,6 +60,9 @@ export class Battle {
     }
     console.log(attack, damage);
     this.battleOver();
+    if(this.over) {
+      this.battleEnd();
+    }
   }
 
   battleOver() {
@@ -69,5 +73,25 @@ export class Battle {
       this.over = true;
       this.winner = this.player;
     }
+  }
+
+  battleEnd() {
+    if (this.winner) {
+      if (this.winner === this.player) {
+        alert("YOU WIN");
+        $("#score").append(`<li> ${this.enemy.name} Defeated!</li>`);
+      } else {
+        alert("YOU LOSE");
+      }
+    }
+    setTimeout(function() {
+      $("#main-game").removeClass("add-background");
+      $("main-game").addClass("add-skulls");
+      $("#adversary").text("");
+      $(".main-map").show();
+      $(".battle-frame").hide();
+      $("#main-game").addClass("add-background");
+
+    }, 2000);
   }
 }
