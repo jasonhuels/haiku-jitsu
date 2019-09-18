@@ -70,6 +70,9 @@ export async function doDamage(line1, line2, line3, enemy) {
   damArr[4] = -(noRepeats(haiku));
   if(damage < 0) { damage = 0; }
   damArr[5] = damage;
+  if(damage === 0) {
+    damArr[0] = 0;
+  }
 
   document.getElementById("d1").innerText = `Base Damage: ${damArr[0]}`;
   document.getElementById("d2").innerText  = `Big Word Bonus: ${damArr[1]}`
