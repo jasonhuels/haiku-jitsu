@@ -22,7 +22,7 @@ export class Battle {
       damage = await doDamage(line1, line2, line3, this.enemy);
       console.log(damage);
       this.enemy.takeDamage(damage);
-      // console.log("enemy health " + this.enemy.health);
+      console.log("enemy health " + this.enemy.health);
     }
     this.battleOver();
     if(!this.over) {
@@ -38,14 +38,10 @@ export class Battle {
     if(haikuChecker(attack[0], attack[1], attack[2])) {
       damage = await doDamage(attack[0], attack[1], attack[2], this.player);
       this.player.takeDamage(damage);
-      // console.log("player health " + this.player.health);
+      console.log("player health " + this.player.health);
     }
     console.log(attack, damage);
     this.battleOver();
-    // if(!this.over) {
-    //   this.playerTurn();
-    //
-    // }
   }
 
   battleOver() {

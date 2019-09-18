@@ -10,6 +10,7 @@ import {Battle} from './battle.js';
 
   let newPlayer = new Player();
 
+
   $(document).ready(function() {
     let newBattle
     $("#user-info").submit(function(event){
@@ -26,7 +27,6 @@ import {Battle} from './battle.js';
 
   $("#hippie").click(function(){
     $("#adversary").text("Hippie");
-    console.log("working");
     newPlayer.health = 100;
     let hippie = new enemy.Hippie(100);
     newBattle = new Battle(newPlayer, hippie);

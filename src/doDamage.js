@@ -39,11 +39,9 @@ export async function doDamage(line1, line2, line3, enemy) {
     bigWords.push(newLine3);
   }
   if(bigWords.length > 0) {
-    console.log("WHY IS THIS HAPPENING?");
     let someVariable = await realWord(bigWords)
     damage += someVariable;
   }
-
 
   let haiku = line1.concat(line2).concat(line3);
 
@@ -63,7 +61,6 @@ function checkAlliteration(haiku) {
   let bonus = 0;
   for(let i=0; i<haiku.length-1; i++) {
     if(haiku[i][0] === haiku[i+1][0]) {
-      console.log("alliteration bonus", haiku[i], haiku[i+1])
       bonus += 5;
     }
   }
@@ -90,7 +87,6 @@ function noRepeats(haiku) {
 }
 
 async function realWord(words) {
-  console.log("promise made")
   let bonus = 0;
   let exists = false;
   const diction = new Dictionary();
@@ -107,13 +103,11 @@ async function realWord(words) {
   }
 
   await Promise.all([promise, promise2, promise3]).then(function(response){
-    console.log(response);
     for(let i=0; i<response.length; i++) {
       if(response[i]) {
         let body = JSON.parse(response[i]);
         if(body) {
           bonus += 5;
-          console.log("add some points")
         }
       }
     }
