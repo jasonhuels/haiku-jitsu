@@ -25,6 +25,8 @@ $(document).ready(function() {
 
   $("#hippie").click(function() {
     $("#adversary").text("Hippie");
+    $("#main-game").removeClass("add-background");
+    $("#main-game").addClass("add-skulls");
     newPlayer.health = 100;
     let hippie = new enemy.Hippie(100);
     newBattle = new Battle(newPlayer, hippie);
@@ -34,6 +36,8 @@ $(document).ready(function() {
 
   $("#hipster").click(function() {
     $("#adversary").text("Hipster");
+    $("#main-game").removeClass("add-background");
+    $("#main-game").addClass("add-skulls");
     newPlayer.health = 100;
     let hipster = new enemy.Hipster(100);
     newBattle = new Battle(newPlayer, hipster);
@@ -43,6 +47,8 @@ $(document).ready(function() {
 
   $("#professor").click(function() {
     $("#adversary").text("Professor");
+    $("#main-game").removeClass("add-background");
+    $("#main-game").addClass("add-skulls");
     newPlayer.health = 100;
     let professor = new enemy.Professor(100);
     newBattle = new Battle(newPlayer, professor);
@@ -52,7 +58,8 @@ $(document).ready(function() {
 
   $("#singer").click(function() {
     $("#adversary").text("Goth");
-
+    $("#main-game").removeClass("add-background");
+    $("#main-game").addClass("add-skulls");
     newPlayer.health = 100;
     let singer = new enemy.Goth(100);
     newBattle = new Battle(newPlayer, singer);
@@ -62,6 +69,8 @@ $(document).ready(function() {
 
   $("#hacker").click(function() {
     $("#adversary").text("Hacker");
+    $("#main-game").removeClass("add-background");
+    $("#main-game").addClass("add-skulls");
     newPlayer.health = 100;
     let hacker = new enemy.Hacker(100);
     newBattle = new Battle(newPlayer, hacker);
