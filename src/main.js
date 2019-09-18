@@ -9,7 +9,6 @@ import {Battle} from './battle.js';
 
 
   let newPlayer = new Player();
-
 $(document).ready(function() {
   let newBattle
   $("#user-info").submit(function(event) {
