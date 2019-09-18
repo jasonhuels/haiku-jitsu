@@ -85,6 +85,7 @@ export class Hippie extends Enemy {
     this.haikus[6] = ["My incense use is", "a lot like my politics", "very liberal"];
     this.haikus[7] = ["Nostalgic dreaming", "I wish it was the sixties", "when Woodstock was good"];
     this.haikus[8] = ["Patchouli perfume", "perpetually perplexed", "paisley pants preferred"];
+    this.haikus[9] = ["You think I smell bad", "I think that I smell groovy", "a natural scent"];
   }
 }
 // this.haikus[] = ["", "", ""];
@@ -92,7 +93,7 @@ export class Hipster extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Hipster";
-    this.keywords = ["micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan"];
+    this.keywords = ["micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan", "influential", "vape", "fanny-pack"];
     this.haikus = [];
     this.haikus[0] = ["I write lots of haikus", "but you would'nt get them", "..."];
     this.haikus[1] = ["Where can I get some", "post-ironic micro-brew", "small-batch kombucha?"];
@@ -103,6 +104,7 @@ export class Hipster extends Enemy {
     this.haikus[6] = ["Swilling micro-brew", "from a dirty mason jar", "mustache will filter"];
     this.haikus[7] = ["I am an artist", "dragging my old typewriter", "an honest crafstman"];
     this.haikus[8] = ["You follow the trends", "I accidentely start", "I'm influential"];
+    this.haikus[9] = ["I don't smoke, I vape", "I have multiple flavors", "in my fanny-pack"];
   }
 }
 
@@ -121,6 +123,7 @@ export class Hacker extends Enemy {
     this.haikus[6] = ["I am all power", "I hacked your credit checker", "Your score is zero"];
     this.haikus[7] = ["All your database", "are belong to us, sucker!", "Get the reference?"];
     this.haikus[8] = ["The Internet's down", "What is your wi-fi password", "I AM DESPERATE!"];
+    this.haikus[9] = ["Carpal tunnel hurt", "but I press on with my work", "it is my calling"];
   }
 }
 
@@ -139,6 +142,7 @@ export class Professor extends Enemy {
     this.haikus[6] = ["Extramarital", "Emotionalization", "Extravaganza"];
     this.haikus[7] = ["You, challenging me?", "Humerous Hysteria", "Humiliation"];
     this.haikus[8] = ["Mathematical", "Maneuverability", "Metamorphoses"];
+    this.haikus[9] = ["Vociferate an", "Anesthesiologist", "to numb your sick burns"];
   }
 }
 
@@ -157,5 +161,6 @@ export class Goth extends Enemy {
     this.haikus[6] = ["Sweet serenity", "is smoking clove cigarettes", "while sobbing alone"];
     this.haikus[7] = ["Eyeliner running", "the black ink in my journal", "is made of my tears"];
     this.haikus[8] = ["NO! I'm not emo.", "I'm goth, there's a difference.", "Though I'm not sure what..."];
+    this.haikus[9] = ["Coffins are cozy", "black roses are beautiful", "can't wait for my wake"];
   }
 }
