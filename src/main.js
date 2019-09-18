@@ -60,7 +60,7 @@ $(document).ready(function() {
   });
 
 
-  $("#singer").click(function() {
+  $(".singer").click(function() {
     $("#adversary").text("Goth");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
@@ -88,8 +88,7 @@ $(document).ready(function() {
   $("#haiku").submit((event) => {
     event.preventDefault();
     newBattle.playerTurn();
-    console.log(newBattle.enemy);
-
+    
     if (newBattle.over) {
       newBattle.battleEnd();
     }
