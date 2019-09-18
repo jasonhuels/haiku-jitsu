@@ -45,23 +45,22 @@ label {
 }
 
 #show-name {
+  margin-top: 10px;
   text-align: center;
 }
 
 .adv-output-field {
-  margin-left: 700px;
-}
-
-#adversary {
-  text-align: center;
+  margin-top: 30px;
+  margin-left: 1000px;
 }
 
 #adversary-avatar {
-  margin-top: -120px;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 #player-game {
-  margin-top: 800px;
+  margin-top: 200px;
   margin-left: 20px;
 }
 #score {
@@ -81,6 +80,11 @@ label {
 
 .main-map {
   display: none;
+}
+#user-image {
+  margin-left: 90px;
+  /* margin-right: auto; */
+  margin-top: 20px;
 }
 
 #hippie {
@@ -115,7 +119,7 @@ label {
   /* margin-bottom: 2000px; */
 }
 
-#singer {
+.singer {
   height: 200px;
   /* float: left; */
 }
@@ -164,11 +168,6 @@ h1 {
   margin: 2px;
 }
 
-#health {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #title {
   font-family: 'Mansalva', cursive;
   font-size: 250px;
@@ -187,6 +186,12 @@ h1 {
 }
 #haiku {
   margin-left: 20px;
+}
+#rules {
+  margin-top: 600px;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Concert One', cursive;
+  font-size: 20px;
 }
 
 /* The Modal (background) */
