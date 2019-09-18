@@ -13,6 +13,7 @@
   <div class="row game-play">
     <div class="col col-md-2 stripes">
       <div id="game-info-panel">
+        <img id="user-image" class="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
         <h1 id="show-name"></h1>
         <!-- <div class="show-avatar">
 
@@ -20,17 +21,27 @@
         <ul id="score">
           <p>Accomplishments:</p>
         </ul>
+        <div id="rules">
+          <h1>Rules:</h1>
+          <ol>
+            <li>A true Haiku will inflict 10 damage.</li>
+            <li>Bonus damage for alliteration</li>
+            <li>Bonus damage for rhyming.</li>
+            <li>Bonus damage for one word lines.</li>
+            <li>Bonus Damage for hitting keywords.</li>
+          </ol>
+        </div>
       </div>
-    </div>
+      </div>
     <div class="col col-md-10 stripes" id="main-game">
       <div class="welcome-screen">
 
-        <!-- logo here -->
+
         <h1 id="title">Haiku Jitsu</h1>
         <form id="user-info">
           <label for="name-field">Player Name: </label>
           <input type="text" id="name-field" name="name-field" placeholder="name" required><br>
-          <button type="submit" class="bg-success" name="button">Create Player!</button>
+          <button type="submit" class="btn bg-success" name="button">Create Player!</button>
 
         </form>
         <!-- different avatar select -->
@@ -52,11 +63,12 @@
         </div>
         <div class="singer-div">
           <h1>Goth</h1>
-          <img id="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
+          <img class="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
         </div>
       </div>
       <div class="battle-frame">
         <div class="adv-output-field">
+          <div id="adversary-avatar"></div>
           <h1 id="adversary"></h1>
           <div class="row" id="health">
             <div class="p1-health-bar-display">
@@ -76,8 +88,10 @@
             </div>
           </div>
         </div>
-        <div id="adversary-avatar"></div>
         <div id="player-game">
+          <div id="player-avatar">
+            <img class="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
+          </div>
           <h1 id="player-name"></h1>
           <div class="row" id="health">
             <div class="p1-health-bar-display">
