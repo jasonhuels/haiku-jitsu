@@ -12,40 +12,48 @@ export class Battle {
     this.winner = '';
   }
 
-  playerTurn() {
+  async playerTurn() {
     let line1 = $("#first-line").val();
     let line2 = $("#second-line").val();
     let line3 = $("#third-line").val();
     $("#haiku").trigger("reset");
+
     let damage = 0;
     if(haikuChecker(line1, line2, line3)) {
-      damage = doDamage(line1, line2, line3, this.enemy);
+      damage = await doDamage(line1, line2, line3, this.enemy);
       console.log(damage);
       this.enemy.takeDamage(damage);
+
       this.enemy.enemyHealthBar();
+
     }
     this.battleOver();
     if(!this.over) {
       this.enemyTurn();
     }
-    inputtedLines();
+
   }
 
 
-  enemyTurn() {
+  async enemyTurn() {
     let attack = this.enemy.attack();
     let damage = 0;
+    document.getElementById("a1").innerText = attack[0];
+    document.getElementById("a2").innerText  = attack[1];
+    document.getElementById("a3").innerText = attack[2];
+    document.getElementById("myModal").style.display = "block";
+    setTimeout(function() {
+      document.getElementById("myModal").style.display = 'none';
+    }, 5000);
     if(haikuChecker(attack[0], attack[1], attack[2])) {
-      damage = doDamage(attack[0], attack[1], attack[2], this.player);
+      damage = await doDamage(attack[0], attack[1], attack[2], this.player);
       this.player.takeDamage(damage);
+
       this.player.playerHealthBar();
+
     }
     console.log(attack, damage);
     this.battleOver();
-    // if(!this.over) {
-    //   this.playerTurn();
-    //
-    // }
   }
 
   battleOver() {
@@ -57,14 +65,4 @@ export class Battle {
       this.winner = this.player;
     }
   }
-}
-
-function inputtedLines() {
-  let line1 = $("#first-line").val();
-  let line2 = $("#second-line").val();
-  let line3 = $("#third-line").val();
-  $(".input-lines").append("<li>" + line1 + "</li>");
-  $(".input-lines").append("<li>" + line2 + "</li>");
-  $(".input-lines").append("<li>" + line3 + "</li>");
-
 }
