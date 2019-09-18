@@ -12,7 +12,7 @@ export class Battle {
     this.winner = '';
   }
 
-  layerTurn() {
+  playerTurn() {
     $("#haiku").submit((event) => {
       event.preventDefault();
       let line1 = $("#first-line").val();
