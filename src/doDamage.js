@@ -4,9 +4,11 @@ import {Dictionary} from './dictionary.js'
 export async function doDamage(line1, line2, line3, enemy) {
   /*
   damArr[0] = base damage
-  damArr[1] = alliteration bonus
-  damArr[2] = repeat deduction
-  damArr[3] = single word line bonus
+  damArr[1] = single word line bonus
+  damArr[2] = keyword bonus
+  damArr[3] = alliteration bonus
+  damArr[4] = repeat deduction
+  damArr[4] = total damage
   */
   let damArr = [10];
   let damage = 10;
@@ -46,21 +48,36 @@ export async function doDamage(line1, line2, line3, enemy) {
     bigWords.push(newLine3);
   }
   if(bigWords.length > 0) {
-    let someVariable = await realWord(bigWords)
-    damage += someVariable;
+    let bigWordBonus = await realWord(bigWords);
+    damage += bigWordBonus;
+    damArr[1] = bigWordBonus;
   }
 
   let haiku = line1.concat(line2).concat(line3);
+  let kwBonus = 0;
 
   for(let i=0; i<extraDamage.length; i++) {
     if(haiku.includes(extraDamage[i])) {
       damage += 10;
+      kwBonus += 10;
     }
   }
+  damArr[2] = kwBonus;
 
   damage += checkAlliteration(haiku);
+  damArr[3] = checkAlliteration(haiku);
   damage -= noRepeats(haiku);
+  damArr[4] = -(noRepeats(haiku));
   if(damage < 0) { damage = 0; }
+  damArr[5] = damage;
+
+  document.getElementById("d1").innerText = `Base Damage: ${damArr[0]}`;
+  document.getElementById("d2").innerText  = `Big Word Bonus: ${damArr[1]}`
+  document.getElementById("d3").innerText = `Keyword Bonus: ${damArr[2]}`
+  document.getElementById("d4").innerText = `Alliteration Bonus: ${damArr[3]}`
+  document.getElementById("d5").innerText  = `Repeat Deduction: ${damArr[4]}`
+  document.getElementById("d6").innerText  = `Total Damage: ${damArr[5]}`
+
   return damage;
 }
 

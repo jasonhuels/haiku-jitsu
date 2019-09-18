@@ -88,16 +88,6 @@ $(document).ready(function() {
     if (newBattle.over) {
       newBattle.battleEnd();
     }
-    // if (newBattle.winner) {
-    //   if (newBattle.winner === newPlayer) {
-    //     alert("YOU WIN");
-    //     $("#score").append(`<li> ${newBattle.enemy.name} Defeated!</li>`);
-    //     battleEnd();
-    //   } else {
-    //     alert("YOU LOSE");
-    //     battleEnd();
-    //   }
-    // }
   });
 });
 
@@ -106,13 +96,3 @@ function battleStart() {
   $(".battle-frame").show();
   $("#main-game").removeClass("add-background");
 }
-
-// function battleEnd() {
-//   setTimeout(function() {
-//     $("#adversary").text("");
-//     $(".main-map").show();
-//     $(".battle-frame").hide();
-//     $("#main-game").addClass("add-background");
-//
-//   }, 2000);
-// }

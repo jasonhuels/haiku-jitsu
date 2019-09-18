@@ -214,12 +214,39 @@ h1 {
 
 /* Modal Content */
 .modal-content {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
   text-align: center;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 40%;
+}
+
+.poem-lines {
+  font-family: 'Permanent Marker', cursive;
+}
+
+#d1, #d2, #d3, #d4, #d5 {
+  font-family: arial;
+  font-size: 15px;
+  padding: 0px;
+}
+#d6 {
+  font-family: arial;
+  font-size: 20px;
+  font-weight:  bold;
+  padding: 0px;
+}
+#damage-list {
+  display: inline-block;
+  text-align: left;
+  margin-left: 50%;
+}
+
+#d5 {
+  color: red;
 }
 
 .add-background {
