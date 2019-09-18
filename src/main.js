@@ -30,14 +30,10 @@ import {Battle} from './battle.js';
     console.log("working");
     newPlayer.health = 100;
     let hippie = new enemy.Hippie(100);
-    let newBattle = new Battle(newPlayer, hippie);
-    // console.log(newBattle);
-    newBattle.playerTurn();
+    newBattle = new Battle(newPlayer, hippie);
+
    battleStart();
-    // newBattle.battleOver();
-   // while(!newBattle.over) {
-   //   newBattle.playerTurn();
-   // }
+
    if (newBattle.over) {
      battleEnd();
    }
@@ -56,14 +52,11 @@ import {Battle} from './battle.js';
     newPlayer.health = 100;
    let hipster = new enemy.Hipster(100);
    newBattle = new Battle(newPlayer, hipster);
-   // console.log("hipster", hipster);
+
    battleStart();
-   // console.log(newBattle);
-   // while(!newBattle.over) {
-   //   newBattle.playerTurn();
-   // }
+
    if (newBattle.winner === newPlayer) {
-     // console.log(newBattle);
+
      alert("YOU WIN");
      $("#score").append("<li> Hipster Defeated!</li>");
      battleEnd();

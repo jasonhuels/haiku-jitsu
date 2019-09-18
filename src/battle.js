@@ -12,31 +12,22 @@ export class Battle {
     this.winner = '';
   }
 
- backend
-
   playerTurn() {
-
-=======
-  playerTurn() {
-    $("#haiku").submit((event) => {
-      event.preventDefault();
- master
-      let line1 = $("#first-line").val();
-      let line2 = $("#second-line").val();
-      let line3 = $("#third-line").val();
-      $("#haiku").trigger("reset");
-      let damage = 0;
-      if(haikuChecker(line1, line2, line3)) {
-        damage = doDamage(line1, line2, line3, this.enemy);
-        console.log(damage);
-        this.enemy.takeDamage(damage);
-      }
-      this.battleOver();
-      if(!this.over) {
-        this.enemyTurn();
-      }
-      inputtedLines();
-
+    let line1 = $("#first-line").val();
+    let line2 = $("#second-line").val();
+    let line3 = $("#third-line").val();
+    $("#haiku").trigger("reset");
+    let damage = 0;
+    if(haikuChecker(line1, line2, line3)) {
+      damage = doDamage(line1, line2, line3, this.enemy);
+      console.log(damage);
+      this.enemy.takeDamage(damage);
+    }
+    this.battleOver();
+    if(!this.over) {
+      this.enemyTurn();
+    }
+    inputtedLines();
   }
 
 
