@@ -5,6 +5,7 @@ export class Player {
   constructor() {
     this.health = 100;
     this.keywords = [];
+    this.assignKeywords();
     this.playerHealthBar();
   }
 
@@ -49,6 +50,15 @@ export class Player {
       $("#p1-20").fadeOut();
     } else if (this.health <= 0){
       $("#p1-10").fadeOut();
+    }
+  }
+
+  assignKeywords() {
+    const enemyKeywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura", "micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan", "code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic", "Vocabulary", "Intimidating", "Illuminati", "Megalomaniacal", "Conceptualization", "Unbelievable", "University", "soul", "miasma", "angst", "rain", "pain", "darkness", "death", "decay"];
+    for(let i=0; i<5; i++) {
+      let randomIndex = Math.floor(Math.random()*enemyKeywords.length);
+      this.keywords.push(enemyKeywords[randomIndex]);
+      enemyKeywords.splice(randomIndex, 1);
     }
   }
 }

@@ -1,7 +1,7 @@
 import * as enemy from './enemy.js';
 import {Dictionary} from './dictionary.js'
 
-export function doDamage(line1, line2, line3, enemy) {
+export async function doDamage(line1, line2, line3, enemy) {
   let damage = 10;
   let extraDamage = enemy.keywords;
   let reg = /[a-z \s]/g;
@@ -29,20 +29,19 @@ export function doDamage(line1, line2, line3, enemy) {
   line2 = newLine2.split(" ");
   line3 = newLine3.split(" ");
   let bigWords = [];
-  if(line1 == newLine1) {
+  if(line1[0] === newLine1) {
     bigWords.push(newLine1);
   }
-  if(line2 == newLine2) {
+  if(line2[0] === newLine2) {
     bigWords.push(newLine2);
   }
-  if(line3 == newLine3) {
+  if(line3[0] === newLine3) {
     bigWords.push(newLine3);
   }
   if(bigWords.length > 0) {
-    damage += realWord(bigWords)
+    let someVariable = await realWord(bigWords)
+    damage += someVariable;
   }
-  // let bonus = bigWord(line1, newLine1, line2, newLine2, line3, newLine3);
-  // damage += bonus;
 
   let haiku = line1.concat(line2).concat(line3);
 
@@ -89,40 +88,30 @@ function noRepeats(haiku) {
 
 async function realWord(words) {
   let bonus = 0;
-  // for(let i=0; i<words.length; i++) {
-  //
-  // }
   let exists = false;
-  // const diction = new Dictionary();
-  // const promise = diction.checkWord(word);
-  // promise.then(async (response) => {
-  //   const body = await JSON.parse(response);
-  //   if(body) {
-  //     exists = true;
-  //     console.log("add some points")
-  //   }
-  // }, function(error) {
-  //   $('.showErrors').text(`There was an error processing your request: ${error.message}`);
-  // });
-  return exists;
+  const diction = new Dictionary();
+  const diction2 = new Dictionary();
+  const diction3 = new Dictionary();
+  const promise = diction.checkWord(words[0]);
+  let promise2;
+  let promise3;
+  if(words[1]) {
+    promise2 = diction2.checkWord(words[1]);
+  }
+  if(words[2]) {
+    promise3 = diction3.checkWord(words[2]);
+  }
+
+  await Promise.all([promise, promise2, promise3]).then(function(response){
+    for(let i=0; i<response.length; i++) {
+      if(response[i]) {
+        let body = JSON.parse(response[i]);
+        if(body) {
+          bonus += 5;
+        }
+      }
+    }
+
+  });
+  return bonus;
 }
-//
-// async function bigWord(line1, newLine1, line2, newLine2, line3, newLine3) {
-//   let bonus = 0;
-//   if(line1 == newLine1) {
-//     if(await realWord(newLine1)) {
-//       bonus += 10;
-//     }
-//   }
-//   if(line2 == newLine2) {
-//     if(await realWord(newLine2)) {
-//       bonus += 10;
-//     }
-//   }
-//   if(line3 == newLine3) {
-//     if(await realWord(newLine3)) {
-//       bonus += 10;
-//     }
-//   }
-//   return bonus;
-// }

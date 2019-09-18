@@ -5,6 +5,7 @@ import $ from 'jquery';
 export class Enemy {
   constructor(health) {
     this.health = health;
+    this.name;
     this.keywords = [];
     this.haikus = [];
     this.enemyHealthBar();
@@ -63,6 +64,7 @@ export class Enemy {
 export class Hippie extends Enemy {
   constructor(health) {
     super(health);
+    this.name = "Hippie";
     this.keywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura"];
     this.haikus = [];
     this.haikus[0] = ["Hey dude like chill out", "my birkenstocks are busted", "Um... I like need a minute"];
@@ -71,26 +73,30 @@ export class Hippie extends Enemy {
     this.haikus[3] = ["Peace and love are great", "The Grateful Dead are better", "Have you heard Phish yet?"];
     this.haikus[4] = ["Hey man, be nice dude", "Don't harsh my buzz, I'm tripping", "I'm feeling groovy"];
     this.haikus[5] = ["Dude don't drag me down", "your aura's all askew and", "I'm too high to fight"];
+    this.haikus[6] = ["My incense use is", "a lot like my politics", "very liberal"];
   }
 }
 
 export class Hipster extends Enemy {
   constructor(health) {
     super(health);
+    this.name = "Hipster";
     this.keywords = ["micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan"];
     this.haikus = [];
     this.haikus[0] = ["I write lots of haikus", "but you would'nt get them", "..."];
     this.haikus[1] = ["Where can I get some", "post-ironic micro-brew", "small-batch kombucha?"];
-    this.haikus[2] = ["My band is on tour", "with a band you've never heard of", "it's that exclusive"];
+    this.haikus[2] = ["My band is on tour", "with a band you've never heard", "it's that exclusive"];
     this.haikus[3] = ["My mustache got stuck", "in a bespoke fixed-gear bike", "lost my fedora"];
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
+    this.haikus[6] = ["Micro-brew swilling", "from a dirty mason jar", "mustache will filter"];
   }
 }
 
 export class Hacker extends Enemy {
   constructor(health) {
     super(health);
+    this.name = "Hacker";
     this.keywords = ["code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
     this.haikus = [];
     this.haikus[0] = ["My code is 1337", "I can't be beat", "What do you mean, parsing error?"];
@@ -98,13 +104,15 @@ export class Hacker extends Enemy {
     this.haikus[2] = ["My code is so dry", "I only write JavaScript", "asynchronously"];
     this.haikus[3] = ["Hacked your computer", "your password is just password", "you're a total noob"];
     this.haikus[4] = ["Hot wires in my hands", "connect for complete circuit", "Dropping logic bombs"];
-    this.haikus[5] = ["Crying constantly", "code can't compile correctly", "congratulations"];
+    this.haikus[5] = ["Crying constantly", "code can't compile correctly", "cue consternation"];
+    this.haikus[6] = ["", "", ""];
   }
 }
 
 export class Professor extends Enemy {
   constructor(health) {
     super(health);
+    this.name = "Professor";
     this.keywords = ["Vocabulary", "Intimidating", "Illuminati", "Megalomaniacal", "Conceptualization", "Unbelievable", "University"];
     this.haikus = [];
     this.haikus[0] = ["Appreciating", "for the ivory tower", "achoo."];
@@ -119,13 +127,14 @@ export class Professor extends Enemy {
 export class Goth extends Enemy {
   constructor(health) {
     super(health);
+    this.name = "Goth";
     this.keywords = ["soul", "miasma", "angst", "rain", "pain", "darkness", "death", "decay"];
     this.haikus = [];
     this.haikus[0] = ["Death, pain, and sadness", "there is no escape from this", "I'm really really sad"];
     this.haikus[1] = ["Miasma raining", "on my dark decaying soul", "death is coming soon"];
-    this.haikus[2] = ["Angst on whole wheat toast", "pain is my companion", "rain on my parade"];
+    this.haikus[2] = ["Angst on whole wheat toast", "pain is my soul's companion", "rain on my parade"];
     this.haikus[3] = ["Darkness surrounds me", "a frown is my umbrella", "there all is aching"];
     this.haikus[4] = ["The cemetary", "is where I spend my free time", "summer vacation"];
-    this.haikus[5] = ["Macabre maddening", "myopic miasmaness", "makes me malcontent"];
+    this.haikus[5] = ["Macabre maddness", "myopic miasma malaise", "makes me malcontent"];
   }
 }
