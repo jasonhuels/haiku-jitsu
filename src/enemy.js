@@ -104,6 +104,7 @@ export class Hipster extends Enemy {
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
     this.haikus[6] = ["Swilling micro-brew", "from a dirty mason jar", "mustache will filter"];
     this.haikus[7] = ["I am an artist", "dragging my old typewriter", "an honest crafstman"];
+    this.haikus[8] = ["You follow the trends", "I accidently started", "I'm influential"];
   }
 }
 
@@ -111,7 +112,7 @@ export class Hacker extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Hacker";
-    this.keywords = ["code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
+    this.keywords = ["code", "hacked",  "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic"];
     this.haikus = [];
     this.haikus[0] = ["My code is 1337", "I can't be beat", "What do you mean, parsing error?"];
     this.haikus[1] = ["Internet of things", "a hacker's wonderful dream", "D.D.O.S. time"];
@@ -121,6 +122,7 @@ export class Hacker extends Enemy {
     this.haikus[5] = ["Crying constantly", "code can't compile correctly", "cue consternation"];
     this.haikus[6] = ["I am all power", "I hacked your credit checker", "Your score is zero"];
     this.haikus[7] = ["All your database", "are belong to us, sucker!", "Get the reference?"];
+    this.haikus[8] = ["The Internet's down", "What is your wi-fi password", "I AM DESPERATE!"];
   }
 }
 
@@ -128,7 +130,7 @@ export class Professor extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Professor";
-    this.keywords = ["vocabulary", "intimidating", "illuminati", "megalomaniacal", "conceptualization", "unbelievable", "university"];
+    this.keywords = ["vocabulary", "intimidating", "illuminati", "megalomaniacal", "conceptualization", "unbelievable", "university", "mathematical"];
     this.haikus = [];
     this.haikus[0] = ["Appreciating", "for the ivory tower", "achoo."];
     this.haikus[1] = ["Abominable", "Decriminalization", "Illuminati"];
@@ -138,6 +140,7 @@ export class Professor extends Enemy {
     this.haikus[5] = ["Conscientiousness", "Conceptualization", "Communication"];
     this.haikus[6] = ["Extramarital", "Emotionalization", "Extravaganza"];
     this.haikus[7] = ["You, challenging me?", "Humerous Hysteria", "Humiliation"];
+    this.haikus[8] = ["Mathematical", "Manoeuvrability", "Metamorphoses"];
   }
 }
 
@@ -155,5 +158,6 @@ export class Goth extends Enemy {
     this.haikus[5] = ["Macabre maddness", "myopic miasma malaise", "makes me malcontent"];
     this.haikus[6] = ["Sweet serenity", "is smoking clove cigarettes", "while sobbing alone"];
     this.haikus[7] = ["Eyeliner running", "the black ink in my journal", "is made of my tears"];
+    this.haikus[8] = ["NO! I'm not emo.", "I'm goth, there's a difference.", "Though I'm not sure what..."];
   }
 }

@@ -44,6 +44,7 @@ $(document).ready(function() {
   $("#professor").click(function() {
     $("#adversary").text("Professor");
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let professor = new enemy.Professor(100);
     newBattle = new Battle(newPlayer, professor);
     battleStart();
