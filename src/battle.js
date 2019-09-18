@@ -18,6 +18,11 @@ export class Battle {
     let line3 = $("#third-line").val();
     $("#haiku").trigger("reset");
 
+    $(".player-lines").html(" ");
+    $(".player-lines").append("<li>" + line1 + "</li>");
+    $(".player-lines").append("<li>" + line2 + "</li>");
+    $(".player-lines").append("<li>" + line3 + "</li>");
+
     let damage = 0;
     if(haikuChecker(line1, line2, line3)) {
       damage = await doDamage(line1, line2, line3, this.enemy);
