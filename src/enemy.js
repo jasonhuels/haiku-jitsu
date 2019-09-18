@@ -76,6 +76,7 @@ export class Hippie extends Enemy {
     this.haikus[5] = ["Dude don't drag me down", "your aura's all askew and", "I'm too high to fight"];
     this.haikus[6] = ["My incense use is", "a lot like my politics", "very liberal"];
     this.haikus[7] = ["Nostalgic dreaming", "I wish it was the sixties", "when Woodstock was good"];
+    this.haikus[8] = ["Patchouli perfume", "perpetually perplexed", "paisley pants preferred"];
   }
 }
 // this.haikus[] = ["", "", ""];
@@ -109,7 +110,7 @@ export class Hacker extends Enemy {
     this.haikus[4] = ["Hot wires in my hands", "connect for complete circuit", "Dropping logic bombs"];
     this.haikus[5] = ["Crying constantly", "code can't compile correctly", "cue consternation"];
     this.haikus[6] = ["I am all power", "I hacked your credit checker", "Your score is zero"];
-    this.haikus[7] = ["All your database", "are belong to us. Do you", "get the reference?"];
+    this.haikus[7] = ["All your database", "are belong to us, sucker!", "Get the reference?"];
   }
 }
 
