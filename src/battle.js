@@ -36,7 +36,6 @@ export class Battle {
 
   }
 
-
   async enemyTurn() {
     let attack = this.enemy.attack();
     let damage = 0;
@@ -81,6 +80,8 @@ export class Battle {
       }
     }
     setTimeout(function() {
+      $("#main-game").removeClass("add-background");
+      $("main-game").addClass("add-skulls");
       $("#adversary").text("");
       $(".main-map").show();
       $(".battle-frame").hide();
