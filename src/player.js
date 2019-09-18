@@ -65,7 +65,7 @@ export class Player {
   }
 
   assignKeywords() {
-    const enemyKeywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura", "micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan", "code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic", "vocabulary", "intimidating", "illuminati", "megalomaniacal", "conceptualization", "unbelievable", "university", "soul", "miasma", "angst", "rain", "pain", "darkness", "death", "decay"];
+    const enemyKeywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura", "paisley", "patchouli", "micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan", "code", "hacker", "computer", "internet", "javascript", "password", "asynchronously", "logic", "vocabulary", "intimidating", "illuminati", "megalomaniacal", "conceptualization", "unbelievable", "university", "soul", "miasma", "angst", "rain", "pain", "darkness", "death", "decay"];
     for(let i=0; i<5; i++) {
       let randomIndex = Math.floor(Math.random()*enemyKeywords.length);
       this.keywords.push(enemyKeywords[randomIndex]);
