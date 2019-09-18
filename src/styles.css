@@ -2,6 +2,9 @@
   border-style: solid;
   border-radius: 20px;
 }
+body {
+  /* background-color: black; */
+}
 
  #first-line, #second-line, #third-line, #submit {
   margin-top: 20px;
@@ -25,9 +28,10 @@
 .welcome-screen {
   text-align: center;
 }
-.game-play {
-  /* display: none; */
-}
+.stripes {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23cbc5d4' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
 
 #show-name {
   text-align: center;
@@ -61,6 +65,35 @@
 }
 #hipster {
   height: 200px;
+
+}
+.hipster-div {
+  float: right;
+  margin-top: -90px;
+  margin-right: 50px;
+}
+#hacker {
+  height: 200px;
+  /* float: left; */
+}
+#professor {
+  height: 200px;
+  /* float: left; */
+}
+.professor-div {
+  float: right;
+  margin-top: -100px;
+  margin-right: 400px;
+  /* margin-bottom: 2000px; */
+}
+#singer {
+  height: 200px;
+  /* float: left; */
+}
+.singer-div {
+  float: right;
+  margin-top: -300px;
+  margin-right: 400px;
 }
 
 #game-info-panel {
@@ -103,6 +136,14 @@ h1 {
   margin-right: auto;
 
 
+}
+#title {
+  font-family: 'Mansalva', cursive;
+  font-size: 250px;
+  margin-top: 200px;
+}
+#user-info {
+  margin-top: 100px;
 }
 
 
