@@ -12,9 +12,15 @@ export class Battle {
     this.winner = '';
   }
 
+ backend
 
   playerTurn() {
 
+=======
+  playerTurn() {
+    $("#haiku").submit((event) => {
+      event.preventDefault();
+ master
       let line1 = $("#first-line").val();
       let line2 = $("#second-line").val();
       let line3 = $("#third-line").val();
