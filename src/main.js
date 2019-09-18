@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 
   $("#singer").click(function() {
-    $("#adversary").text("Singer");
+    $("#adversary").text("Goth");
 
     newPlayer.health = 100;
     let singer = new enemy.Goth(100);
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 
   $("#hacker").click(function() {
-    $("#adversary").text("hacker");
+    $("#adversary").text("Hacker");
     newPlayer.health = 100;
     let hacker = new enemy.Hacker(100);
     newBattle = new Battle(newPlayer, hacker);

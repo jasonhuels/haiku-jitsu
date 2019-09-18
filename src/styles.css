@@ -2,15 +2,12 @@
   border-style: solid;
   border-radius: 20px;
 }
-body {
-  /* background-color: black; */
-}
 
- #first-line, #second-line, #third-line, #submit {
+#first-line, #second-line, #third-line, #submit {
   margin-top: 20px;
 }
 
- .col-md-2 {
+.col-md-2 {
   overflow: hidden;
   padding-bottom: 100%;
   margin-bottom: -100%;
@@ -19,36 +16,58 @@ body {
 .row {
   margin: 20px;
 }
+
 .bg-success {
   margin: 10px;
 }
+
 .score {
   border-style: solid;
 }
+
 .welcome-screen {
   text-align: center;
 }
+
 .stripes {
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23cbc5d4' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-  }
+}
 
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Concert One', cursive;
+}
+
+label {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Concert One', cursive;
+  font-size: 20px;
+}
 
 #show-name {
   text-align: center;
 }
+
 .adv-output-field {
   margin-left: 700px;
 }
+
 #adversary {
   text-align: center;
 }
+
 #adversary-avatar {
   margin-top: -120px;
 }
+
 #player-game {
   margin-top: 800px;
+  margin-left: 20px;
 }
-
+#score {
+  font-weight: bold;
+  text-align: center;
+}
 
 .col-md-10 {
   overflow: hidden;
@@ -56,40 +75,51 @@ body {
   margin-bottom: -100%;
 }
 
+.player-lines {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .main-map {
   display: none;
 }
+
 #hippie {
   height: 200px;
   margin: 30px;
 }
+
 #hipster {
   height: 200px;
-
 }
+
 .hipster-div {
   float: right;
   margin-top: -90px;
   margin-right: 50px;
 }
+
 #hacker {
   height: 200px;
   /* float: left; */
 }
+
 #professor {
   height: 200px;
   /* float: left; */
 }
+
 .professor-div {
   float: right;
   margin-top: -100px;
   margin-right: 400px;
   /* margin-bottom: 2000px; */
 }
+
 #singer {
   height: 200px;
   /* float: left; */
 }
+
 .singer-div {
   float: right;
   margin-top: -300px;
@@ -99,17 +129,21 @@ body {
 #game-info-panel {
   display: none;
 }
+
 h1 {
   color: green;
   margin-top: 50px;
 }
+
 .green {
   background-color: green;
 }
+
 .yellow {
   background-color: yellow;
 }
-.red{
+
+.red {
   background-color: red;
 }
 
@@ -123,45 +157,59 @@ h1 {
   color: green;
 }
 
-
 .health-bar-display {
   width: 25px;
   height: 25px;
   border-radius: 10px;
   margin: 2px;
 }
+
 #health {
   margin-left: auto;
   margin-right: auto;
-
-
 }
+
 #title {
   font-family: 'Mansalva', cursive;
   font-size: 250px;
   margin-top: 200px;
 }
+
 #user-info {
   margin-top: 100px;
 }
-.input-lines {
+
+.player-lines {
   float: right;
-  /* margin-top: */
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: 30px;
+}
+#haiku {
+  margin-left: 20px;
 }
 
 /* The Modal (background) */
 .modal {
   /* display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
