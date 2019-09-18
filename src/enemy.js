@@ -74,7 +74,7 @@ export class Hippie extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Hippie";
-    this.keywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura"];
+    this.keywords = ["flower", "love", "incense", "groovy", "psychedelic", "peace", "dude", "aura", "patchouli", "paisley"];
     this.haikus = [];
     this.haikus[0] = ["Hey dude like chill out", "my birkenstocks are busted", "Um... I like need a minute"];
     this.haikus[1] = ["They call me Love Child", "Patchouli is my incense", "Rose is my flower"];

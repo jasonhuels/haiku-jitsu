@@ -23,6 +23,14 @@ export class Battle {
     $(".player-lines").append("<li>" + line2 + "</li>");
     $(".player-lines").append("<li>" + line3 + "</li>");
 
+    document.getElementById("a1").innerText = line1;
+    document.getElementById("a2").innerText  = line2;
+    document.getElementById("a3").innerText = line3;
+    document.getElementById("myModal").style.display = "block";
+    setTimeout(function() {
+      document.getElementById("myModal").style.display = 'none';
+    }, 5000);
+
     let damage = 0;
     if(haikuChecker(line1, line2, line3)) {
       damage = await doDamage(line1, line2, line3, this.enemy);
@@ -34,7 +42,10 @@ export class Battle {
     }
     this.battleOver();
     if(!this.over) {
-      this.enemyTurn();
+      setTimeout(() =>{
+        this.enemyTurn();
+      }, 6000);
+
     } else {
       this.battleEnd();
     }
