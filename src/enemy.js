@@ -31,6 +31,7 @@ export class Enemy {
     if (this.health === 100) {
       $(".a1-hp").show();
       $(".a1-hp").removeClass("red");
+      $(".a1-hp").removeClass("yellow");
       $(".a1-hp").addClass("green");
     }
     if(this.health <= 90){

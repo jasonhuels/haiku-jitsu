@@ -13,11 +13,8 @@
   <div class="row game-play">
     <div class="col col-md-2 stripes">
       <div id="game-info-panel">
-        <img id="user-image" class="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
+        <img id="user-image" class="singer-image" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
         <h1 id="show-name"></h1>
-        <!-- <div class="show-avatar">
-
-      </div> -->
         <ul id="score">
           <p>Accomplishments:</p>
         </ul>
@@ -26,17 +23,15 @@
           <ol>
             <li>A true Haiku will inflict 10 damage.</li>
             <li>Bonus damage for alliteration</li>
-            <li>Bonus damage for rhyming.</li>
             <li>Bonus damage for one word lines.</li>
             <li>Bonus Damage for hitting keywords.</li>
+            <li>Penalty for word repetition.</li>
           </ol>
         </div>
       </div>
-      </div>
+    </div>
     <div class="col col-md-10 stripes" id="main-game">
       <div class="welcome-screen">
-
-
         <h1 id="title">Haiku Jitsu</h1>
         <form id="user-info">
           <label for="name-field">Player Name: </label>
@@ -44,7 +39,6 @@
           <button type="submit" class="btn bg-success" name="button">Create Player!</button>
 
         </form>
-        <!-- different avatar select -->
       </div>
       <div class="main-map">
         <h1>Hippie</h1>
@@ -63,7 +57,7 @@
         </div>
         <div class="singer-div">
           <h1>Goth</h1>
-          <img class="singer" src="https://svgsilh.com/svg_v2/154618.svg" alt="">
+          <img class="singer" src="https://cdn.pixabay.com/photo/2013/07/12/17/13/exhausted-151822_960_720.png" alt="">
         </div>
       </div>
       <div class="battle-frame">
@@ -132,7 +126,7 @@
           </ul>
 
         </div>
-         <form id="haiku" action="index.html" method="post">
+        <form id="haiku" action="index.html" method="post">
           <input class="col-lg-5" type="text" id="first-line" placeholder="first line"><br>
           <input class="col-lg-5" type="text" id="second-line" placeholder="second line"><br>
           <input class="col-lg-5" type="text" id="third-line" placeholder="third line"><br>

@@ -60,11 +60,11 @@ $(document).ready(function() {
   });
 
 
-  $("#singer").click(function() {
+  $(".singer").click(function() {
     $("#adversary").text("Goth");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html('<img src="https://svgsilh.com/svg_v2/154618.svg" height=200px>');
+      $("#adversary-avatar").html('<img src="https://cdn.pixabay.com/photo/2013/07/12/17/13/exhausted-151822_960_720.png" height=200px>');
 
     newPlayer.health = 100;
     let singer = new enemy.Goth(100);
@@ -88,7 +88,6 @@ $(document).ready(function() {
   $("#haiku").submit((event) => {
     event.preventDefault();
     newBattle.playerTurn();
-    console.log(newBattle.enemy);
 
     if (newBattle.over) {
       newBattle.battleEnd();
