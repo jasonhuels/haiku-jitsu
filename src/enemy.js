@@ -91,7 +91,7 @@ export class Hipster extends Enemy {
     this.haikus[3] = ["My mustache got stuck", "in a bespoke fixed-gear bike", "lost my fedora"];
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
-    this.haikus[6] = ["Micro-brew swilling", "from a dirty mason jar", "mustache will filter"];
+    this.haikus[6] = ["Swilling micro-brew", "from a dirty mason jar", "mustache will filter"];
     this.haikus[7] = ["I am an artist", "dragging my old typewriter", "an honest crafstman"];
   }
 }

@@ -95,8 +95,6 @@ $("#hacker").click(function() {
   });
 });
 
-
-
 function battleStart() {
   $(".main-map").hide();
   $(".battle-frame").show();
