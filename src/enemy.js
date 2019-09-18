@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-
-
 export class Enemy {
   constructor(health) {
     this.health = health;
@@ -104,7 +102,7 @@ export class Hipster extends Enemy {
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];
     this.haikus[6] = ["Swilling micro-brew", "from a dirty mason jar", "mustache will filter"];
     this.haikus[7] = ["I am an artist", "dragging my old typewriter", "an honest crafstman"];
-    this.haikus[8] = ["You follow the trends", "I accidently started", "I'm influential"];
+    this.haikus[8] = ["You follow the trends", "I accidentely start", "I'm influential"];
   }
 }
 
@@ -140,7 +138,7 @@ export class Professor extends Enemy {
     this.haikus[5] = ["Conscientiousness", "Conceptualization", "Communication"];
     this.haikus[6] = ["Extramarital", "Emotionalization", "Extravaganza"];
     this.haikus[7] = ["You, challenging me?", "Humerous Hysteria", "Humiliation"];
-    this.haikus[8] = ["Mathematical", "Manoeuvrability", "Metamorphoses"];
+    this.haikus[8] = ["Mathematical", "Maneuverability", "Metamorphoses"];
   }
 }
 
