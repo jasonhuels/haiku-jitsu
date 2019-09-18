@@ -25,6 +25,7 @@ export class Player {
     if (this.health === 100) {
       $(".p1-hp").show();
       $(".p1-hp").removeClass("red");
+      $(".p1-hp").removeClass("yellow");
       $(".p1-hp").addClass("green");
     }
     if(this.health <= 90){
@@ -49,7 +50,7 @@ export class Player {
     }
     if (this.health <= 30){
       $("#p1-40").fadeOut();
-      $(".p1-hp").removeClass("yellow")
+      $(".p1-hp").removeClass("yellow");
       $(".p1-hp").addClass("red");
     }
     if (this.health <= 20){

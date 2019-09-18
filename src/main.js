@@ -44,6 +44,7 @@ $(document).ready(function() {
   $("#professor").click(function() {
     $("#adversary").text("Professor");
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let professor = new enemy.Professor(100);
     newBattle = new Battle(newPlayer, professor);
     battleStart();
@@ -51,7 +52,7 @@ $(document).ready(function() {
 
 
   $("#singer").click(function() {
-    $("#adversary").text("Singer");
+    $("#adversary").text("Goth");
 
     newPlayer.health = 100;
     let singer = new enemy.Goth(100);
@@ -75,18 +76,18 @@ $(document).ready(function() {
     console.log(newBattle.enemy);
 
     if (newBattle.over) {
-      battleEnd();
+      newBattle.battleEnd();
     }
-    if (newBattle.winner) {
-      if (newBattle.winner === newPlayer) {
-        alert("YOU WIN");
-        $("#score").append(`<li> ${newBattle.enemy.name} Defeated!</li>`);
-        battleEnd();
-      } else {
-        alert("YOU LOSE");
-        battleEnd();
-      }
-    }
+    // if (newBattle.winner) {
+    //   if (newBattle.winner === newPlayer) {
+    //     alert("YOU WIN");
+    //     $("#score").append(`<li> ${newBattle.enemy.name} Defeated!</li>`);
+    //     battleEnd();
+    //   } else {
+    //     alert("YOU LOSE");
+    //     battleEnd();
+    //   }
+    // }
   });
 });
 
@@ -96,12 +97,12 @@ function battleStart() {
   $("#main-game").removeClass("add-background");
 }
 
-function battleEnd() {
-  setTimeout(function() {
-    $("#adversary").text("");
-    $(".main-map").show();
-    $(".battle-frame").hide();
-    $("#main-game").addClass("add-background");
-
-  }, 2000);
-}
+// function battleEnd() {
+//   setTimeout(function() {
+//     $("#adversary").text("");
+//     $(".main-map").show();
+//     $(".battle-frame").hide();
+//     $("#main-game").addClass("add-background");
+//
+//   }, 2000);
+// }
