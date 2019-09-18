@@ -12,16 +12,17 @@ export class Battle {
     this.winner = '';
   }
 
-  playerTurn() {
+  async playerTurn() {
     let line1 = $("#first-line").val();
     let line2 = $("#second-line").val();
     let line3 = $("#third-line").val();
     $("#haiku").trigger("reset");
     let damage = 0;
     if(haikuChecker(line1, line2, line3)) {
-      damage = doDamage(line1, line2, line3, this.enemy);
+      damage = await doDamage(line1, line2, line3, this.enemy);
       console.log(damage);
       this.enemy.takeDamage(damage);
+      // console.log("enemy health " + this.enemy.health);
     }
     this.battleOver();
     if(!this.over) {
@@ -31,12 +32,13 @@ export class Battle {
   }
 
 
-  enemyTurn() {
+  async enemyTurn() {
     let attack = this.enemy.attack();
     let damage = 0;
     if(haikuChecker(attack[0], attack[1], attack[2])) {
-      damage = doDamage(attack[0], attack[1], attack[2], this.player);
+      damage = await doDamage(attack[0], attack[1], attack[2], this.player);
       this.player.takeDamage(damage);
+      // console.log("player health " + this.player.health);
     }
     console.log(attack, damage);
     this.battleOver();

@@ -81,7 +81,7 @@ export class Hipster extends Enemy {
     this.haikus = [];
     this.haikus[0] = ["I write lots of haikus", "but you would'nt get them", "..."];
     this.haikus[1] = ["Where can I get some", "post-ironic micro-brew", "small-batch kombucha?"];
-    this.haikus[2] = ["My band is on tour", "with a band you've never heard of", "it's that exclusive"];
+    this.haikus[2] = ["My band is on tour", "with a band you've never heard", "it's that exclusive"];
     this.haikus[3] = ["My mustache got stuck", "in a bespoke fixed-gear bike", "lost my fedora"];
     this.haikus[4] = ["Hyphonated words", "are the vinyl of language", "artisan delight!"];
     this.haikus[5] = ["Free-box foraging", "flannel fashion, frankly", "I'm a trend setter."];

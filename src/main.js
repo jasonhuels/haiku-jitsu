@@ -24,7 +24,6 @@ import {Battle} from './battle.js';
     });
 
 
-
   $("#hippie").click(function(){
     $("#adversary").text("Hippie");
     console.log("working");
