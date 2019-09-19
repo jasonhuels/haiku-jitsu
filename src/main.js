@@ -7,6 +7,7 @@ import * as enemy from './enemy.js';
 import {haikuChecker} from './haikuChecker.js';
 import {Battle} from './battle.js';
 import {loadImages} from './loadImages.js';
+import * as images from './loadImages.js';
 
 
   let newPlayer = new Player();
@@ -29,7 +30,7 @@ $(document).ready(function() {
     $("#adversary").text("Hippie");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-    $("#adversary-avatar").html('<img src="https://www.pngkey.com/png/detail/60-608037_stick-figure-running-drawing-download-animation-free-stick.png" alt="a stick figure" height=200px>');
+    $("#adversary-avatar").html(`<img src='${images.getHippie()}' alt="a stick figure" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let hippie = new enemy.Hippie(100);
@@ -42,7 +43,7 @@ $(document).ready(function() {
     $("#adversary").text("Hipster");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html('<img src="https://t3.ftcdn.net/jpg/00/80/41/34/500_F_80413451_JpH4YrPvmiwINVAny8xpXYa2tFiLbkBl.jpg" height=200px>');
+      $("#adversary-avatar").html(`<img src="${images.getHipster()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let hipster = new enemy.Hipster(100);
@@ -55,7 +56,7 @@ $(document).ready(function() {
     $("#adversary").text("Professor");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html('<img src="https://media.istockphoto.com/vectors/cartoon-illustration-of-old-business-man-or-teacher-or-professor-at-vector-id847759486?k=6&m=847759486&s=612x612&w=0&h=K3-zZwYZZW5lzU46fZk-LHmKO7WwOjSlefCAakdndXQ=" height=200px>');
+      $("#adversary-avatar").html(`<img src="${images.getProfessor()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let professor = new enemy.Professor(100);
@@ -68,7 +69,7 @@ $(document).ready(function() {
     $("#adversary").text("Goth");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html('<img src="https://cdn.pixabay.com/photo/2013/07/12/17/13/exhausted-151822_960_720.png" height=200px>');
+      $("#adversary-avatar").html(`<img src="${images.getGoth()}" height=200px>`);
 
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
@@ -82,7 +83,7 @@ $(document).ready(function() {
     $("#adversary").text("Hacker");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html('<img src="https://media.istockphoto.com/vectors/cyber-crime-doodle-vector-id518674300" height=200px>');
+      $("#adversary-avatar").html(`<img src="${images.getHacker()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let hacker = new enemy.Hacker(100);
