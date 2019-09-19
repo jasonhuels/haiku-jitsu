@@ -93,7 +93,7 @@ export class Hipster extends Enemy {
   constructor(health) {
     super(health);
     this.name = "Hipster";
-    this.keywords = ["micro-brew", "vinyl", "fixed-gear", "mustache", "fedora", "exclusive", "small-batch", "artisan", "influential", "vape", "fanny-pack"];
+    this.keywords = ["microbrew", "vinyl", "fixedgear", "mustache", "fedora", "exclusive", "smallbatch", "artisan", "influential", "vape", "fanny-pack"];
     this.haikus = [];
     this.haikus[0] = ["I write lots of haikus", "but you would'nt get them", "..."];
     this.haikus[1] = ["Where can I get some", "post-ironic micro-brew", "small-batch kombucha?"];
