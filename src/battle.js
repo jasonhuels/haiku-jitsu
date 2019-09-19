@@ -63,11 +63,9 @@ export class Battle {
       setTimeout(() =>{
         this.enemyTurn();
       }, 6000);
-
     } else {
       this.battleEnd();
     }
-
   }
 
   async enemyTurn() {
@@ -85,9 +83,14 @@ export class Battle {
     if(haikuChecker(attack[0], attack[1], attack[2])) {
       damage = await doDamage(attack[0], attack[1], attack[2], this.player);
       this.player.takeDamage(damage);
-
       this.player.playerHealthBar();
-
+    } else {
+      document.getElementById("d1").innerText = `Base Damage: 0`;
+      document.getElementById("d2").innerText  = `Big Word Bonus: 0`
+      document.getElementById("d3").innerText = `Keyword Bonus: 0`
+      document.getElementById("d4").innerText = `Alliteration Bonus: 0`
+      document.getElementById("d5").innerText  = `Repeat Deduction: 0`
+      document.getElementById("d6").innerText  = `Total Damage: 0`
     }
     console.log(attack, damage);
     this.battleOver();

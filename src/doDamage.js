@@ -10,7 +10,7 @@ export async function doDamage(line1, line2, line3, enemy) {
   damArr[4] = repeat deduction
   damArr[4] = total damage
   */
-  let damArr = [];
+  let damArr = [10];
   let damage = 10;
   let extraDamage = enemy.keywords;
   let reg = /[a-z \s]/g;
@@ -74,19 +74,12 @@ export async function doDamage(line1, line2, line3, enemy) {
   }
   if(damage < 0) { damage = 0; }
   damArr[5] = damage;
-  if(damage === 0) {
-    damArr[0] = 0;
-    damArr[5] = 0;
-  } else {
-    damArr[0] = 10;
-  }
 
   for(let i=0; i<damArr.length; i++) {
     if(damArr[i] === undefined) {
       damArr[i] = 0;
     }
   }
-
   document.getElementById("d1").innerText = `Base Damage: ${damArr[0]}`;
   document.getElementById("d2").innerText  = `Big Word Bonus: ${damArr[1]}`
   document.getElementById("d3").innerText = `Keyword Bonus: ${damArr[2]}`
@@ -117,9 +110,12 @@ function noRepeats(haiku) {
       }
     }
     if(count > 3) {
-      deduction += 5*(count%3);
+      deduction += 5;
     }
     count = 0;
+  }
+  if(deduction > 0) {
+    deduction += 5;
   }
   return deduction;
 }
@@ -141,7 +137,6 @@ async function realWord(words) {
   }
 
   await Promise.all([promise, promise2, promise3]).then(function(response){
-    console.log(response);
     for(let i=0; i<response.length; i++) {
       if(response[i]) {
         let body = JSON.parse(response[i]);
@@ -150,7 +145,6 @@ async function realWord(words) {
         }
       }
     }
-
   });
   return bonus;
 }

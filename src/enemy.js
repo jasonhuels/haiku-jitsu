@@ -26,7 +26,6 @@ export class Enemy {
     return defeated;
   }
   enemyHealthBar() {
-    console.log(this.health)
     $("#adv-health").text(this.health);
     if (this.health === 100) {
       $(".a1-hp").show();
