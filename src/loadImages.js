@@ -10,7 +10,7 @@ export function loadImages() {
   const HACKER = document.getElementById('hacker');
   const HIPSTER= document.getElementById('hipster');
   const PROFESSOR = document.getElementById('professor');
-  //const GOTH = document.getElementById('singer');
+  const GOTH = document.getElementById('singer');
 
   HIPPIE.src = hippie;
   HACKER.src = hacker;
@@ -35,6 +35,6 @@ export function getProfessor() {
   return professor;
 }
 
-// export function getGoth() {
-//   return goth;
-// }
+export function getGoth() {
+  return goth;
+}
