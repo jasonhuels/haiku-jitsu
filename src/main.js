@@ -6,11 +6,13 @@ import {Player} from './player.js';
 import * as enemy from './enemy.js';
 import {haikuChecker} from './haikuChecker.js';
 import {Battle} from './battle.js';
+import {loadImages} from './loadImages.js';
 
 
   let newPlayer = new Player();
 $(document).ready(function() {
-  let newBattle
+  let newBattle;
+  loadImages();
   $("#user-info").submit(function(event) {
     event.preventDefault();
     let nameOfPlayer = $("#name-field").val();
