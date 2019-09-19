@@ -33,10 +33,10 @@ module.exports = {
         ]
       },
       //new
-      {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader'
-      },
+      // {
+      //   test: /\.(png|jpg)$/,
+      //   loader: 'url-loader'
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -54,15 +54,23 @@ module.exports = {
         }
         },
         {
-            test: /\.(png|jp(e*)g|svg)$/,
-            use: [{
-              loader: 'url-loader',
-              options: {
-                limit: 8000, // Convert images < 8kb to base64 strings
-                name: 'images/[hash]-[name].[ext]'
-              }
-            }]
-          }
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
+        // {
+        //     test: /\.(png|jp(e*)g|svg)$/,
+        //     use: [{
+        //       loader: 'url-loader',
+        //       options: {
+        //         limit: 8000, // Convert images < 8kb to base64 strings
+        //         name: 'images/[hash]-[name].[ext]'
+        //       }
+        //     }]
+        //   }
         ]
       }
     };
