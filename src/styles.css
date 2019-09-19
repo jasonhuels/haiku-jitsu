@@ -201,6 +201,10 @@ label {
   border-color: red;
   color: red;
 }
+.text-red {
+  color: red;
+
+}
 
 .hacker-div {
   margin-top: 400px;
