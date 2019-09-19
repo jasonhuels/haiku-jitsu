@@ -2,7 +2,7 @@ import hippie from './img/hippie.png';
 import hacker from './img/hackerfinal.gif';
 import hipster from './img/hipster.png';
 import professor from './img/professor.png';
-import goth from './img/professor.png';
+import goth from './img/goth.png';
 
 export function loadImages() {
   const HIPPIE = document.getElementById('hippie');
@@ -15,7 +15,7 @@ export function loadImages() {
   HACKER.src = hacker;
   HIPSTER.src = hipster;
   PROFESSOR.src = professor;
-  GOTH.src = goth
+  GOTH.src = goth;
 }
 
 
