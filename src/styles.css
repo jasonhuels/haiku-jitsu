@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+background-color: #111;
+}
+
+.title {
+font-family: "Montserrat";
+text-align: center;
+color: #FFF;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+letter-spacing: 1px;
+}
+
+h2{
+background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+background-size: cover;
+color: transparent;
+-moz-background-clip: text;
+-webkit-background-clip: text;
+text-transform: uppercase;
+font-size: 300px;
+line-height: .75;
+margin: 10px 0;
+font-weight: bold;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Concert One', cursive;
+}
+
+#color {
+  color: green;
+}
+
 .col {
   border-style: solid;
   border-radius: 20px;
@@ -36,6 +75,7 @@
 h1 {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Concert One', cursive;
+  color: green;
 }
 
 label {
@@ -100,7 +140,7 @@ label {
 
 .hipster-div {
   float: right;
-  margin-top: -90px;
+  margin-top: 700px;
   margin-right: 50px;
 }
 
@@ -114,8 +154,8 @@ label {
 
 .professor-div {
   float: right;
-  margin-top: -100px;
-  margin-right: 400px;
+  margin-top: 100px;
+  margin-right: 100px;
 }
 
 .singer {
@@ -124,7 +164,7 @@ label {
 
 .singer-div {
   float: right;
-  margin-top: -300px;
+  /* margin-top: 100px; */
   margin-right: 400px;
 }
 
@@ -132,21 +172,24 @@ label {
   display: none;
 }
 
-h1 {
+/* h1 {
   color: green;
   margin-top: 50px;
-}
+} */
 
 .green {
   background-color: green;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #e6e600;
 }
 
 .red {
   background-color: red;
+}
+.hacker-div {
+  margin-top: 300px;
 }
 
 .health-bar {
@@ -188,7 +231,7 @@ h1 {
 }
 
 #rules {
-  margin-top: 600px;
+  margin-top: 300px;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Concert One', cursive;
   font-size: 20px;
