@@ -33,6 +33,10 @@ h2 {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Concert One', cursive;
 }
+.clickable:hover {
+  cursor: pointer;
+  background: lightgrey
+}
 
 #color {
   color: green;
