@@ -158,24 +158,22 @@ label {
   margin-right: 100px;
 }
 
+#singer {
+  height: 200px;
+}
 .singer {
   height: 200px;
 }
 
 .singer-div {
   float: right;
-  /* margin-top: 100px; */
+ margin-top: 500px;
   margin-right: 400px;
 }
 
 #game-info-panel {
   display: none;
 }
-
-/* h1 {
-  color: green;
-  margin-top: 50px;
-} */
 
 .green {
   background-color: green;
@@ -236,6 +234,7 @@ label {
   font-family: 'Concert One', cursive;
   font-size: 20px;
 }
+
 
 /* The Modal (background) */
 .modal {
