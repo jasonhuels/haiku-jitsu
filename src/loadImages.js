@@ -20,7 +20,6 @@ export function loadImages() {
 
 }
 
-
 export function getHippie() {
   return hippie;
 }
