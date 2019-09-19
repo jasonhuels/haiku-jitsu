@@ -216,6 +216,9 @@ h1 {
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
 }
+#endModal {
+  padding-top: 50%;
+}
 
 /* Modal Content */
 .modal-content {

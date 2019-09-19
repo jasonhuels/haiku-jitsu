@@ -29,6 +29,7 @@ $(document).ready(function() {
     $("#main-game").addClass("add-skulls");
     $("#adversary-avatar").html('<img src="https://www.pngkey.com/png/detail/60-608037_stick-figure-running-drawing-download-animation-free-stick.png" alt="a stick figure" height=200px>');
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let hippie = new enemy.Hippie(100);
     newBattle = new Battle(newPlayer, hippie);
     battleStart();
@@ -41,6 +42,7 @@ $(document).ready(function() {
     $("#main-game").addClass("add-skulls");
       $("#adversary-avatar").html('<img src="https://t3.ftcdn.net/jpg/00/80/41/34/500_F_80413451_JpH4YrPvmiwINVAny8xpXYa2tFiLbkBl.jpg" height=200px>');
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let hipster = new enemy.Hipster(100);
     newBattle = new Battle(newPlayer, hipster);
     battleStart();
@@ -67,6 +69,7 @@ $(document).ready(function() {
       $("#adversary-avatar").html('<img src="https://cdn.pixabay.com/photo/2013/07/12/17/13/exhausted-151822_960_720.png" height=200px>');
 
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let singer = new enemy.Goth(100);
     newBattle = new Battle(newPlayer, singer);
     battleStart();
@@ -79,6 +82,7 @@ $(document).ready(function() {
     $("#main-game").addClass("add-skulls");
       $("#adversary-avatar").html('<img src="https://media.istockphoto.com/vectors/cyber-crime-doodle-vector-id518674300" height=200px>');
     newPlayer.health = 100;
+    newPlayer.playerHealthBar();
     let hacker = new enemy.Hacker(100);
     newBattle = new Battle(newPlayer, hacker);
     battleStart();
