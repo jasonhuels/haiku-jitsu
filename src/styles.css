@@ -187,14 +187,19 @@ label {
 
 .green {
   background-color: green;
+  border-color: green;
 }
 
 .yellow {
   background-color: #e6e600;
+  border-color: #e6e600;
+  color: #e6e600;
 }
 
 .red {
   background-color: red;
+  border-color: red;
+  color: red;
 }
 
 .hacker-div {
@@ -205,9 +210,9 @@ label {
 .health-bar {
   width: 25px;
   height: 25px;
-  border: solid white;
-  border-radius: 10px;
-  margin: 2px;
+  /* border: solid 10px ; */
+  /* border-radius: 10px; */
+  /* margin: 2px; */
   float: right;
   color: green;
 }

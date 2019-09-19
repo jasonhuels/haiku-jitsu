@@ -111,6 +111,7 @@ export class Battle {
 
   battleEnd() {
     this.timer.stopTimer();
+    this.timer = '';
     if (this.winner) {
       if (this.winner === this.player) {
         document.getElementById("winOrLoss").innerText = "You WIN!";
