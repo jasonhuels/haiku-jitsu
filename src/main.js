@@ -43,7 +43,7 @@ $(document).ready(function() {
     $("#adversary").text("Hipster");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html(`<img src="${images.getHipster()}" height=200px>`);
+    $("#adversary-avatar").html(`<img src="${images.getHipster()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let hipster = new enemy.Hipster(100);
@@ -56,7 +56,7 @@ $(document).ready(function() {
     $("#adversary").text("Professor");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html(`<img src="${images.getProfessor()}" height=200px>`);
+    $("#adversary-avatar").html(`<img src="${images.getProfessor()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let professor = new enemy.Professor(100);
@@ -69,7 +69,7 @@ $(document).ready(function() {
     $("#adversary").text("Goth");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html(`<img src="${images.getGoth()}" height=200px>`);
+    $("#adversary-avatar").html(`<img src="${images.getGoth()}" height=200px>`);
 
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
@@ -83,7 +83,7 @@ $(document).ready(function() {
     $("#adversary").text("Hacker");
     $("#main-game").removeClass("add-background");
     $("#main-game").addClass("add-skulls");
-      $("#adversary-avatar").html(`<img src="${images.getHacker()}" height=200px>`);
+    $("#adversary-avatar").html(`<img src="${images.getHacker()}" height=200px>`);
     newPlayer.health = 100;
     newPlayer.playerHealthBar();
     let hacker = new enemy.Hacker(100);
