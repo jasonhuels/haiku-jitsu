@@ -10,7 +10,7 @@ export async function doDamage(line1, line2, line3, enemy) {
   damArr[4] = repeat deduction
   damArr[4] = total damage
   */
-  let damArr = [10];
+  let damArr = [];
   let damage = 10;
   let extraDamage = enemy.keywords;
   let reg = /[a-z \s]/g;
@@ -63,15 +63,28 @@ export async function doDamage(line1, line2, line3, enemy) {
     }
   }
   damArr[2] = kwBonus;
-
-  damage += checkAlliteration(haiku);
-  damArr[3] = checkAlliteration(haiku);
-  damage -= noRepeats(haiku);
-  damArr[4] = -(noRepeats(haiku));
+  if(line1 && line2 && line3) {
+    damage += checkAlliteration(haiku);
+    damArr[3] = checkAlliteration(haiku);
+    damage -= noRepeats(haiku);
+    damArr[4] = -(noRepeats(haiku));
+  } else {
+    damArr[3] = 0;
+    damArr[4] = 0;
+  }
   if(damage < 0) { damage = 0; }
   damArr[5] = damage;
   if(damage === 0) {
     damArr[0] = 0;
+    damArr[5] = 0;
+  } else {
+    damArr[0] = 10;
+  }
+
+  for(let i=0; i<damArr.length; i++) {
+    if(damArr[i] === undefined) {
+      damArr[i] = 0;
+    }
   }
 
   document.getElementById("d1").innerText = `Base Damage: ${damArr[0]}`;
@@ -80,7 +93,7 @@ export async function doDamage(line1, line2, line3, enemy) {
   document.getElementById("d4").innerText = `Alliteration Bonus: ${damArr[3]}`
   document.getElementById("d5").innerText  = `Repeat Deduction: ${damArr[4]}`
   document.getElementById("d6").innerText  = `Total Damage: ${damArr[5]}`
-
+  damArr = [];
   return damage;
 }
 
@@ -101,12 +114,10 @@ function noRepeats(haiku) {
     for(let j=1; j<haiku.length; j++) {
       if(haiku[i] === haiku[j]) {
         count++;
-      } else {
-        count = 0;
       }
-      if(count > 3) {
-        deduction += 5;
-      }
+    }
+    if(count > 3) {
+      deduction += 5*(count%3);
     }
     count = 0;
   }
@@ -130,6 +141,7 @@ async function realWord(words) {
   }
 
   await Promise.all([promise, promise2, promise3]).then(function(response){
+    console.log(response);
     for(let i=0; i<response.length; i++) {
       if(response[i]) {
         let body = JSON.parse(response[i]);

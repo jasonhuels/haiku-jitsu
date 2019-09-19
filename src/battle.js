@@ -38,7 +38,13 @@ export class Battle {
       this.enemy.takeDamage(damage);
 
       this.enemy.enemyHealthBar();
-
+    } else {
+      document.getElementById("d1").innerText = `Base Damage: 0`;
+      document.getElementById("d2").innerText  = `Big Word Bonus: 0`
+      document.getElementById("d3").innerText = `Keyword Bonus: 0`
+      document.getElementById("d4").innerText = `Alliteration Bonus: 0`
+      document.getElementById("d5").innerText  = `Repeat Deduction: 0`
+      document.getElementById("d6").innerText  = `Total Damage: 0`
     }
     this.battleOver();
     if(!this.over) {
@@ -89,10 +95,19 @@ export class Battle {
   battleEnd() {
     if (this.winner) {
       if (this.winner === this.player) {
-        alert("YOU WIN");
+        document.getElementById("winOrLoss").innerText = "You WIN!";
+        document.getElementById("endModal").style.display = "block";
+        setTimeout(function() {
+          document.getElementById("endModal").style.display = 'none';
+        }, 5000);
+
         $("#score").append(`<li> ${this.enemy.name} Defeated!</li>`);
       } else {
-        alert("YOU LOSE");
+        document.getElementById("winOrLoss").innerText = "You LOSE!";
+        document.getElementById("endModal").style.display = "block";
+        setTimeout(function() {
+          document.getElementById("endModal").style.display = 'none';
+        }, 5000);
       }
     }
     setTimeout(function() {
