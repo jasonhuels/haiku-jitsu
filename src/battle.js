@@ -3,6 +3,7 @@ import {Player} from './player.js';
 import * as enemy from './enemy.js';
 import {doDamage} from './doDamage.js';
 import $ from 'jquery';
+import {Timer} from './timer.js';
 
 export class Battle {
   constructor(player, enemy) {
@@ -10,6 +11,15 @@ export class Battle {
     this.enemy = enemy;
     this.over = false;
     this.winner = '';
+    this.timer = new Timer(60);
+    setInterval(() => {
+      if(this.timer.finished) {
+        this.enemyTurn();
+        this.timer = new Timer(60);
+      } else {
+        $("#time-left").text(this.timer.getTimeLeft());
+      }
+    }, 1000);
   }
 
   async playerTurn() {
@@ -38,7 +48,9 @@ export class Battle {
       this.enemy.takeDamage(damage);
 
       this.enemy.enemyHealthBar();
+      this.timer.stopTimer();
     } else {
+      this.timer.stopTimer();
       document.getElementById("d1").innerText = `Base Damage: 0`;
       document.getElementById("d2").innerText  = `Big Word Bonus: 0`
       document.getElementById("d3").innerText = `Keyword Bonus: 0`
@@ -65,8 +77,10 @@ export class Battle {
     document.getElementById("a2").innerText  = attack[1];
     document.getElementById("a3").innerText = attack[2];
     document.getElementById("myModal").style.display = "block";
-    setTimeout(function() {
+    setTimeout(() => {
       document.getElementById("myModal").style.display = 'none';
+      this.timer.stopTimer();
+      this.timer = new Timer(60);
     }, 5000);
     if(haikuChecker(attack[0], attack[1], attack[2])) {
       damage = await doDamage(attack[0], attack[1], attack[2], this.player);
@@ -93,6 +107,7 @@ export class Battle {
   }
 
   battleEnd() {
+    this.timer.stopTimer();
     if (this.winner) {
       if (this.winner === this.player) {
         document.getElementById("winOrLoss").innerText = "You WIN!";
