@@ -19,6 +19,12 @@ export class Battle {
       } else {
         $("#time-left").text(this.timer.getTimeLeft());
       }
+
+      if (this.timer.length <= 20) {
+        $("#time-left").addClass("text-red");
+      } else {
+        $("#time-left").removeClass("text-red");
+      }
     }, 1000);
   }
 
